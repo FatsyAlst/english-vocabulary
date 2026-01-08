@@ -16,13 +16,16 @@ import dbzBanner from "/dbz-banner.jpg";
 import f1Banner from "/f1-banner.jpg";
 import peakyBanner from "/peaky-banner.jpg";
 
+// Import vocabulary images
+import gohanPampered from "/gohan-pampered-kid.jpg";
+
 // ═══════════════════════════════════════════════════════════════════════
 // MEDIA TITLES - Shown on landing page
 // ═══════════════════════════════════════════════════════════════════════
 export const MEDIA_TITLES: MediaTitle[] = [
-  { id: "dragonBall", displayName: "dragon ball z", vocabularyCount: 3 },
-  { id: "f1", displayName: "f1", vocabularyCount: 0 },
-  { id: "peakyBlinders", displayName: "peaky blinders", vocabularyCount: 0 },
+  { id: "dragonBall", displayName: "dragon ball z", vocabularyCount: 4 },
+  { id: "f1", displayName: "f1", vocabularyCount: 1 },
+  { id: "peakyBlinders", displayName: "peaky blinders", vocabularyCount: 4 },
 ];
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -62,22 +65,27 @@ export const mediaData: Record<string, MediaData> = {
   dragonBall: {
     id: "dragonBall",
     title: "Dragon Ball Z",
-    vocabularyCount: 3,
-    words: ["withstand", "pampered", "pay-through-the-nose"],
+    vocabularyCount: 5,
+    words: ["jeopardize", "withstand", "pampered", "pay-through-the-nose", "stubborn"],
     scenes: sceneData.dragonBall,
   },
   f1: {
     id: "f1",
     title: "F1",
-    vocabularyCount: 0,
-    words: [],
+    vocabularyCount: 1,
+    words: ["steer"],
     scenes: sceneData.f1,
   },
   peakyBlinders: {
     id: "peakyBlinders",
     title: "Peaky Blinders",
-    vocabularyCount: 0,
-    words: [],
+    vocabularyCount: 4,
+    words: [
+      "turn-a-blind-eye-to",
+      "sell-someone-to-someone",
+      "parley",
+      "on-the-back-foot",
+    ],
     scenes: sceneData.peakyBlinders,
   },
 };
@@ -87,6 +95,52 @@ export const mediaData: Record<string, MediaData> = {
 // To add a new word: copy an existing entry and modify all fields
 // ═══════════════════════════════════════════════════════════════════════
 export const vocabularyData: Record<string, VocabularyWord> = {
+  jeopardize: {
+    id: "jeopardize",
+    word: "Jeopardize",
+    type: "Verb",
+    pronunciation: "/ˈdʒɛpədaɪz/",
+    simplePronunciation: "JEP-ur-dyze",
+    frequency: "Common",
+    definition:
+      "To put something or someone in a dangerous or difficult situation, especially by taking risks or making mistakes; to endanger or threaten.",
+    examples: [
+      "Reckless spending could jeopardize the company's future.",
+      "His careless comments jeopardized the delicate negotiations.",
+      "Don't jeopardize your health by skipping meals.",
+    ],
+    wordFamily: {
+      verb: ["jeopardize", "jeopardizes", "jeopardized", "jeopardizing"],
+      noun: ["jeopardy"],
+      adjective: ["jeopardous (archaic)"],
+    },
+    collocations: [
+      "jeopardize someone's safety",
+      "jeopardize the future",
+      "jeopardize your health",
+      "jeopardize a deal",
+      "jeopardize negotiations",
+    ],
+    usageNotes: [
+      "British spelling: 'jeopardise' (with an 's').",
+      "Related noun 'jeopardy' means 'danger of loss, harm, or failure'.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Colocar em risco / Comprometer / Perigar",
+      examples: [
+        {
+          english: "Reckless spending could jeopardize the company's future.",
+          translated: "Gastos imprudentes poderiam comprometer o futuro da empresa.",
+        },
+        {
+          english: "Don't jeopardize your health by skipping meals.",
+          translated: "Não coloque sua saúde em risco pulando refeições.",
+        },
+      ],
+    },
+  },
+
   withstand: {
     id: "withstand",
     word: "Withstand",
@@ -134,7 +188,6 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         },
       ],
     },
-    mediaImage: dbz3,
   },
 
   resilient: {
@@ -177,7 +230,6 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         },
       ],
     },
-    mediaImage: dbz1,
   },
 
   pampered: {
@@ -240,7 +292,7 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         },
       ],
     },
-    mediaImage: dbz1,
+    mediaImage: gohanPampered,
   },
 
   relentless: {
@@ -287,7 +339,6 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         },
       ],
     },
-    mediaImage: dbz2,
   },
 
   unwavering: {
@@ -326,7 +377,6 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         },
       ],
     },
-    mediaImage: dbz3,
   },
 
   futile: {
@@ -371,7 +421,6 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         },
       ],
     },
-    mediaImage: dbz1,
   },
 
   devastation: {
@@ -413,7 +462,6 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         },
       ],
     },
-    mediaImage: dbz2,
   },
 
   ethereal: {
@@ -461,7 +509,6 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         },
       ],
     },
-    mediaImage: dbz3,
   },
 
   enigmatic: {
@@ -502,7 +549,6 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         },
       ],
     },
-    mediaImage: dbz1,
   },
 
   "pay-through-the-nose": {
@@ -543,7 +589,292 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         },
       ],
     },
-    mediaImage: dbz2,
+
+  },
+
+  steer: {
+    id: "steer",
+    word: "Steer",
+    type: "Verb",
+    pronunciation: "[stɪə(r)]",
+    simplePronunciation: "steer",
+    senses: [
+      {
+        number: 1,
+        type: "verb",
+        frequency: "Most Common",
+        definition: "To control the direction in which a vehicle, boat, or aircraft moves.",
+        examples: [
+          "She steered the car carefully through traffic.",
+          "The captain steered the ship into port.",
+          "He steered his bike around the corner.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        definition: "To guide or direct someone/something towards a particular course of action or direction.",
+        examples: [
+          "She steered the conversation away from politics.",
+          "He steered me towards a career in tech.",
+          "The teacher steered the students through the project.",
+        ],
+      },
+    ],
+    wordFamily: {
+      verb: ["steer", "steers", "steered", "steering"],
+      noun: ["steering"],
+    },
+    collocations: [
+      "steer a car",
+      "steer a boat",
+      "steer the conversation",
+      "steer towards",
+      "steer clear of",
+      "steering wheel",
+    ],
+    usageNotes: [
+      "Common idiom: 'steer clear of' = avoid something or someone.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "1. Guiar / Dirigir / Conduzir | 2. Direcionar / Orientar",
+      examples: [
+        {
+          english: "She steered the car carefully through traffic.",
+          translated: "Ela guiou o carro cuidadosamente pelo trânsito.",
+        },
+        {
+          english: "He steered me towards a career in tech.",
+          translated: "Ele me direcionou para uma carreira em tecnologia.",
+        },
+      ],
+    },
+  },
+
+  stubborn: {
+    id: "stubborn",
+    word: "Stubborn",
+    type: "Adjective",
+    pronunciation: "[ˈstʌbən]",
+    simplePronunciation: "STUB-ern",
+    senses: [
+      {
+        number: 1,
+        type: "adjective",
+        frequency: "Most Common",
+        contextLabel: "often disapproving",
+        definition: "Determined not to change your opinion or attitude; refusing to do what other people want.",
+        examples: [
+          "He was too stubborn to admit that he was wrong.",
+          "She can be as stubborn as a mule.",
+          "His stubborn refusal to listen caused problems.",
+        ],
+      },
+      {
+        number: 2,
+        type: "adjective",
+        frequency: "Common",
+        definition: "Difficult to get rid of, remove, or deal with.",
+        examples: [
+          "That's a stubborn stain — it won't come out.",
+          "She has a stubborn cough that won't go away.",
+          "It's a stubborn problem with no easy solution.",
+        ],
+      },
+    ],
+    wordFamily: {
+      adjective: ["stubborn"],
+      adverb: ["stubbornly"],
+      noun: ["stubbornness"],
+    },
+    collocations: [
+      "stubborn refusal",
+      "stubborn resistance",
+      "stubborn streak",
+      "stubborn stain",
+      "as stubborn as a mule",
+    ],
+    usageNotes: [
+      "Synonym: obstinate (more formal).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "1. Teimoso / Obstinado / Cabeça-dura | 2. Persistente / Difícil de remover",
+      examples: [
+        {
+          english: "He was too stubborn to admit that he was wrong.",
+          translated: "Ele era teimoso demais para admitir que estava errado.",
+        },
+        {
+          english: "That's a stubborn stain — it won't come out.",
+          translated: "Essa é uma mancha persistente — não sai.",
+        },
+      ],
+    },
+  },
+
+  "turn-a-blind-eye-to": {
+    id: "turn-a-blind-eye-to",
+    word: "Turn a blind eye to",
+    type: "Idiom (verb phrase)",
+    pronunciation: "[t\u025c\u02d0n \u0259 bla\u026and a\u026a t\u0259]",
+    simplePronunciation: "turn uh blind EYE tuh",
+    frequency: "Common",
+    definition: "To ignore something that you know is wrong or should not be happening.",
+    examples: [
+      "The authorities turned a blind eye to the gambling.",
+      "He turned a blind eye to what his men were doing.",
+      "They can’t keep turning a blind eye to corruption.",
+    ],
+    collocations: [
+      "turn a blind eye to corruption",
+      "turn a blind eye to wrongdoing",
+      "turn a blind eye to illegal activity",
+      "turn a blind eye to someone’s behavior",
+    ],
+    usageNotes: [
+      "Usually followed by ‘to’ + a noun/gerund (e.g., ‘to bullying’, ‘to cheating’).",
+      "Implies deliberate inaction: you notice it, but choose not to respond.",
+      "Close in meaning to ‘look the other way’ (informal).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Fazer vista grossa (para) / Fechar os olhos (para)",
+      examples: [
+        {
+          english: "The authorities turned a blind eye to the gambling.",
+          translated: "As autoridades fizeram vista grossa para o jogo ilegal.",
+        },
+        {
+          english: "They can’t keep turning a blind eye to corruption.",
+          translated: "Eles n\u00e3o podem continuar fechando os olhos para a corrup\u00e7\u00e3o.",
+        },
+      ],
+    },
+
+  },
+
+  "sell-someone-to-someone": {
+    id: "sell-someone-to-someone",
+    word: "Sell someone (to someone)",
+    type: "Expression (figurative verb phrase)",
+    pronunciation: "[sel \u02c8s\u028cmw\u028cn (t\u0259 \u02c8s\u028cmw\u028cn)]",
+    simplePronunciation: "sell SUM-wun (tuh SUM-wun)",
+    frequency: "Common",
+    definition:
+      "To present someone in a positive, convincing way to another person or group, so they will like, trust, hire, or accept them.",
+    examples: [
+      "I’m just trying to sell you to them, Tom.",
+      "Let me sell her to the board — she’s the best candidate for the role.",
+      "He sold me to the team as someone who could fix the problem quickly.",
+    ],
+    collocations: [
+      "sell someone to a client",
+      "sell someone to the team",
+      "sell someone to the board",
+      "sell yourself to an employer",
+    ],
+    usageNotes: [
+      "Figurative: it doesn’t mean buying/selling a person — it means ‘promote’ or ‘recommend’ persuasively.",
+      "Often used with ‘to’ when you’re introducing someone to a group and trying to win approval.",
+      "Related expressions: ‘sell someone on something’ (persuade), ‘sell yourself’ (present yourself well).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Te vender (bem) / Te promover / Te apresentar de um jeito convincente",
+      examples: [
+        {
+          english: "I’m just trying to sell you to them, Tom.",
+          translated: "Eu s\u00f3 estou tentando te vender bem pra eles, Tom.",
+        },
+        {
+          english: "Let me sell her to the board — she’s the best candidate.",
+          translated: "Deixa eu promover ela pro conselho — ela \u00e9 a melhor candidata.",
+        },
+      ],
+    },
+
+  },
+
+  parley: {
+    id: "parley",
+    word: "Parley",
+    type: "Verb (intransitive) (old-fashioned)",
+    pronunciation: "[\u02c8p\u0251\u02d0li]",
+    simplePronunciation: "PAR-lee",
+    frequency: "Less Common",
+    definition: "To discuss something with an opponent/enemy in order to try to solve a problem; to negotiate.",
+    examples: [
+      "We don’t parley when we’re on the back foot.",
+      "The two sides agreed to parley before the fighting resumed.",
+      "He refused to parley with them under threat.",
+    ],
+    collocations: [
+      "parley with the enemy",
+      "refuse to parley",
+      "agree to parley",
+    ],
+    usageNotes: [
+      "Often used in historical/war contexts; it can sound theatrical or old-fashioned in modern speech.",
+      "Common pattern: ‘parley with someone’.",
+      "Related noun: ‘a parley’ = a discussion between enemies to try to reach an agreement.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Negociar / Conversar para negociar (com o inimigo) / Parlamentar",
+      examples: [
+        {
+          english: "The two sides agreed to parley before the fighting resumed.",
+          translated: "Os dois lados concordaram em negociar antes de os combates recome\u00e7arem.",
+        },
+        {
+          english: "He refused to parley with them under threat.",
+          translated: "Ele se recusou a negociar com eles sob amea\u00e7a.",
+        },
+      ],
+    },
+
+  },
+
+  "on-the-back-foot": {
+    id: "on-the-back-foot",
+    word: "On the back foot",
+    type: "Idiom (prepositional phrase)",
+    pronunciation: "[\u0252n \u00f0\u0259 b\u00e6k f\u028at]",
+    simplePronunciation: "on thuh back foot",
+    frequency: "Common",
+    definition: "At a disadvantage; in a difficult situation where you are reacting rather than controlling events.",
+    examples: [
+      "We don’t parley when we’re on the back foot.",
+      "The early goal put them on the back foot.",
+      "After the bad press, the company was on the back foot.",
+    ],
+    collocations: [
+      "put someone on the back foot",
+      "catch someone on the back foot",
+      "be on the back foot",
+    ],
+    usageNotes: [
+      "Often used in sports, politics, and business.",
+      "Opposite idea: ‘on the front foot’ = in control / attacking.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Na defensiva / Em desvantagem / Em situa\u00e7\u00e3o dif\u00edcil",
+      examples: [
+        {
+          english: "The early goal put them on the back foot.",
+          translated: "O gol cedo os colocou na defensiva.",
+        },
+        {
+          english: "After the bad press, the company was on the back foot.",
+          translated: "Depois da m\u00e1 repercuss\u00e3o, a empresa ficou em desvantagem.",
+        },
+      ],
+    },
+
   },
 };
 

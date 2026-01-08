@@ -60,7 +60,7 @@ export const VocabularyCard = ({ word, mediaId }: VocabularyCardProps) => {
           {/* Content */}
           <div className="relative h-full flex flex-col items-center justify-center p-6 text-center">
             <p className="text-lg text-white/90 italic leading-relaxed">
-              "{word.examples[0]}"
+              "{word.examples?.[0] || word.senses?.[0]?.examples?.[0] || ''}"
             </p>
             
             {/* Click hint */}

@@ -27,6 +27,22 @@ const VocabularyDetailPage = () => {
   const [showTranslation, setShowTranslation] = useState(false);
   const colors = mediaId ? getMediaColors(mediaId) : getMediaColors("default");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [scrollY, setScrollY] = useState(0);
+
+  // Track mouse position for floating bubble (corner anchor - subtle movement)
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+    };
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Load voices when available
   useEffect(() => {
@@ -57,15 +73,46 @@ const VocabularyDetailPage = () => {
     utterance.pitch = 1;
     
     // Find the best matching voice for the accent
-    const targetVoice = voices.find((v) => {
-      const lang = v.lang.toLowerCase();
-      if (accent === "en-US") {
-        return lang === "en-us" || (lang.startsWith("en") && v.name.toLowerCase().includes("us"));
-      } else {
-        return lang === "en-gb" || (lang.startsWith("en") && (v.name.toLowerCase().includes("uk") || v.name.toLowerCase().includes("british")));
-      }
-    }) || voices.find((v) => v.lang.startsWith("en"));
+    // Priority: exact lang match with "natural/premium" name > exact lang match > partial match
+    const findBestVoice = () => {
+      const langCode = accent.toLowerCase();
+      
+      // Premium/natural voice keywords (these usually sound better)
+      const premiumKeywords = ["natural", "premium", "enhanced", "neural", "wavenet"];
+      
+      // First try: exact language match with premium voice
+      const premiumVoice = voices.find((v) => {
+        const vLang = v.lang.toLowerCase().replace("_", "-");
+        const vName = v.name.toLowerCase();
+        return vLang === langCode && premiumKeywords.some(k => vName.includes(k));
+      });
+      if (premiumVoice) return premiumVoice;
+      
+      // Second try: exact language match
+      const exactMatch = voices.find((v) => {
+        const vLang = v.lang.toLowerCase().replace("_", "-");
+        return vLang === langCode;
+      });
+      if (exactMatch) return exactMatch;
+      
+      // Third try: match by name keywords
+      const keywordMatch = voices.find((v) => {
+        const vName = v.name.toLowerCase();
+        if (accent === "en-US") {
+          return vName.includes("united states") || vName.includes("american") || 
+                 (vName.includes("us") && v.lang.startsWith("en"));
+        } else {
+          return vName.includes("united kingdom") || vName.includes("british") || 
+                 vName.includes("uk") || vName.includes("england");
+        }
+      });
+      if (keywordMatch) return keywordMatch;
+      
+      // Fallback: any English voice
+      return voices.find((v) => v.lang.startsWith("en"));
+    };
     
+    const targetVoice = findBestVoice();
     if (targetVoice) {
       utterance.voice = targetVoice;
     }
@@ -90,7 +137,39 @@ const VocabularyDetailPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-900">
+    <div className="min-h-screen bg-zinc-900 relative">
+      {/* Floating Bubble - corner anchor with subtle cursor influence */}
+      {word?.mediaImage && (
+        <motion.div
+          className="fixed w-24 h-24 rounded-full overflow-hidden pointer-events-none z-50 hidden md:block"
+          animate={{
+            // Corner anchor (bottom-right) with subtle cursor influence
+            x: window.innerWidth - 140 + (mousePos.x - window.innerWidth / 2) * 0.05,
+            y: window.innerHeight - 140 + (mousePos.y - window.innerHeight / 2) * 0.05,
+            opacity: Math.max(0.2, 1 - scrollY / 400), // Fade on scroll
+          }}
+          transition={{
+            type: "spring",
+            damping: 40,
+            stiffness: 80,
+            mass: 1.2,
+          }}
+          style={{
+            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
+            backdropFilter: "blur(8px)",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+          }}
+        >
+          {/* Glass overlay */}
+          <div className="absolute inset-0 bg-white/5 z-10 pointer-events-none" />
+          <motion.img
+            src={word.mediaImage}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+      )}
+
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-8 md:px-8">
         {/* Navigation */}
         <motion.div
@@ -162,46 +241,89 @@ const VocabularyDetailPage = () => {
             </div>
           </motion.header>
 
-          {/* Word Type */}
-          <motion.section variants={itemVariants} className="mb-8">
-            <span className={`inline-block px-4 py-2 ${colors.gradient} rounded-full text-white font-medium`}>
-              {word.type}
-            </span>
-            {word.frequency && (
-              <span className="ml-3 text-zinc-500 italic">{word.frequency}</span>
-            )}
-            {word.contextLabel && (
-              <span className="ml-2 text-zinc-600">({word.contextLabel})</span>
-            )}
-          </motion.section>
+          {/* Word Type - only show for single-meaning words */}
+          {!word.senses && (
+            <motion.section variants={itemVariants} className="mb-8">
+              <span className={`inline-block px-4 py-2 ${colors.gradient} rounded-full text-white font-medium`}>
+                {word.type}
+              </span>
+              {word.frequency && (
+                <span className="ml-3 text-zinc-500 italic">{word.frequency}</span>
+              )}
+              {word.contextLabel && (
+                <span className="ml-2 text-zinc-600">({word.contextLabel})</span>
+              )}
+            </motion.section>
+          )}
 
-          {/* Definition */}
-          <motion.section variants={itemVariants} className="mb-10">
-            <h2 className="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-3">
-              Definition
-            </h2>
-            <p className="text-xl text-zinc-200 leading-relaxed">
-              {word.definition}
-            </p>
-          </motion.section>
+          {/* Single Definition */}
+          {word.definition && !word.senses && (
+            <motion.section variants={itemVariants} className="mb-10">
+              <h2 className="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-3">
+                Definition
+              </h2>
+              <p className="text-xl text-zinc-200 leading-relaxed">
+                {word.definition}
+              </p>
+            </motion.section>
+          )}
 
-          {/* Examples */}
-          <motion.section variants={itemVariants} className="mb-10">
-            <h2 className="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-4">
-              Examples
-            </h2>
-            <ul className="space-y-3">
-              {word.examples.map((example, index) => (
-                <li
-                  key={index}
-                  className="flex items-start gap-3 text-zinc-300"
-                >
-                  <span className={`${colors.text} mt-1`}>•</span>
-                  <span className="italic">{example}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.section>
+          {/* Single Examples */}
+          {word.examples && !word.senses && (
+            <motion.section variants={itemVariants} className="mb-10">
+              <h2 className="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-4">
+                Examples
+              </h2>
+              <ul className="space-y-3">
+                {word.examples.map((example, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-zinc-300"
+                  >
+                    <span className={`${colors.text} mt-1`}>•</span>
+                    <span className="italic">{example}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.section>
+          )}
+
+          {/* Multiple Senses/Definitions */}
+          {word.senses && word.senses.map((sense) => (
+            <motion.section
+              key={sense.number}
+              variants={itemVariants}
+              className="mb-10 p-6 bg-zinc-800/30 rounded-2xl border border-zinc-700/50"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <span className={`inline-flex items-center justify-center w-8 h-8 ${colors.gradient} rounded-full text-white font-bold text-sm`}>
+                  {sense.number}
+                </span>
+                <span className="text-zinc-300 font-medium">{sense.type}</span>
+                <span className="text-zinc-500 italic">- {sense.frequency}</span>
+                {sense.contextLabel && (
+                  <span className="text-zinc-600">({sense.contextLabel})</span>
+                )}
+              </div>
+              <p className="text-xl text-zinc-200 leading-relaxed mb-4">
+                {sense.definition}
+              </p>
+              <h3 className="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-3">
+                Examples
+              </h3>
+              <ul className="space-y-2">
+                {sense.examples.map((example, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-zinc-300"
+                  >
+                    <span className={`${colors.text} mt-1`}>•</span>
+                    <span className="italic">{example}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.section>
+          ))}
 
           {/* Root Word */}
           {word.rootWord && (

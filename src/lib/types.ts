@@ -25,8 +25,18 @@ export type VocabularyWord = {
   simplePronunciation: string;
   frequency?: string;
   contextLabel?: string;
-  definition: string;
-  examples: string[];
+  // For single-meaning words:
+  definition?: string;
+  examples?: string[];
+  // For multi-meaning words:
+  senses?: {
+    number: number;
+    type: string;
+    frequency: string;
+    contextLabel?: string;
+    definition: string;
+    examples: string[];
+  }[];
   rootWord?: {
     word: string;
     pronunciation: string;
