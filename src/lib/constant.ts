@@ -1,4 +1,4 @@
-import { AnimeTitle } from "./types";
+import { MediaTitle } from "./types";
 
 export const ANIMATION_CONFIG = {
   initial: {
@@ -15,10 +15,8 @@ export const ANIMATION_CONFIG = {
   },
 } as const;
 
-export const ANIME_TITLES: AnimeTitle[] = [
-  { id: "demonSlayer", displayName: "demon slayer" },
-  { id: "silentVoice", displayName: "a silent voice" },
-  { id: "attackOnTitan", displayName: "attack on titan" },
-  { id: "spiritedAway", displayName: "spirited away" },
-  { id: "bunnyGirl", displayName: "Rascal Does Not Dream" },
+export const MEDIA_TITLES: MediaTitle[] = [
+  { id: "dragonBall", displayName: "dragon ball z", vocabularyCount: 3 },
+  { id: "f1", displayName: "f1", vocabularyCount: 0 },
+  { id: "peakyBlinders", displayName: "peaky blinders", vocabularyCount: 0 },
 ];

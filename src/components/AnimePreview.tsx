@@ -1,20 +1,19 @@
 import { motion } from "framer-motion";
-import { MousePosition } from "../lib/types";
-import { AnimeSceneEntry } from "../lib/data";
+import { MousePosition, SceneEntry } from "../lib/types";
 
-type AnimePreviewProps = {
+type ScenePreviewProps = {
   hoveredText: string;
-  item: AnimeSceneEntry;
+  item: SceneEntry;
   index: number;
   mousePosition: MousePosition;
 };
 
-export const AnimePreview = ({
+export const ScenePreview = ({
   hoveredText,
   item,
   index,
   mousePosition,
-}: AnimePreviewProps) => (
+}: ScenePreviewProps) => (
   <motion.div
     key={index}
     className="absolute flex aspect-[3/2] w-64 items-center justify-center overflow-hidden rounded-xl shadow-xl"

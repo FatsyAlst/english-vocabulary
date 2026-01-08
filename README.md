@@ -1,36 +1,135 @@
-# 🎬 Anime Scene Gallery
+# 📚 English Vocabulary Tracker
 
-An interactive gallery featuring iconic scenes from my favorite anime series, built with React and Framer Motion. Each title reveals three carefully chosen scenes with dynamic animations and mouse-tracked motion effects.
+A personal vocabulary learning tracker built with React and Framer Motion. Track vocabulary words learned from your favorite media (anime, movies, series) with beautiful animations and organized definitions.
 
-## ✨ Technologies
+## ✨ Features
 
-- `React`
-- `TypeScript`
-- `Framer Motion`
-- `Tailwind CSS`
-- `Vite`
+- **Landing Gallery** - Browse media titles with parallax hover effects
+- **Vocabulary Cards** - Flip cards to reveal example sentences
+- **Detailed Definitions** - Full word explanations following Oxford dictionary format
+- **Audio Pronunciation** - Web Speech API for US/UK pronunciation
+- **Portuguese Translations** - Toggle bilingual examples for learners
 
-## 🚀 Features
+## 🛠️ Technologies
 
-- Spring physics for natural feeling animations
-- Each title reveals three iconic scenes when hovered
-- Scenes respond to mouse movement with parallax effects
-- Adapts to different screen sizes with mobile warnings
- 
-## 📍 The Process
+- `React 18` + `TypeScript`
+- `Framer Motion` - Smooth animations
+- `Tailwind CSS` - Styling
+- `React Router` - Navigation
+- `Vite` - Build tool
+- `Web Speech API` - Pronunciation
 
-I've been on a mission to make something fun with my favorite anime scenes. Most galleries felt static, so I wanted to create something that felt alive. Started simple with React and built up the interactions. When you hover over a title, it smoothly reveals iconic moments from that series. Added some mouse tracking magic with Framer Motion to make the scenes feel more dynamic, like they're floating in space. Sure, it may not be perfect on phones (desktop is where it shines), but I'm pretty happy with how the animations turned out! 
+## 🚦 Getting Started
 
-## 🚦 Running the Project
+```bash
+# Install dependencies
+npm install
 
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Run development server: `npm run dev`
-4. Open `http://localhost:5173` in your browser
+# Start development server
+npm run dev
 
-## 🎞️ Preview
+# Build for production
+npm run build
+```
 
+Open `http://localhost:5173` in your browser.
 
+## 📁 Project Structure
 
-https://github.com/user-attachments/assets/266b81be-dade-4942-8b06-38494194b941
+```
+src/
+├── components/           # Reusable UI components
+│   ├── AnimeTitleText.tsx    # Media title with hover effects
+│   ├── AnimePreview.tsx      # Scene preview images
+│   └── VocabularyCard.tsx    # Flip card component
+├── pages/               # Page components
+│   ├── LandingPage.tsx       # Home gallery
+│   ├── MediaDetailPage.tsx   # Vocabulary grid
+│   └── VocabularyDetailPage.tsx  # Word details
+├── lib/                 # Data and types
+│   ├── types.ts              # TypeScript types
+│   ├── constant.ts           # Animation config
+│   └── vocabularyData.ts     # Mock data (edit this!)
+└── hooks/               # Custom React hooks
+```
+
+## 📝 Adding New Vocabulary
+
+Edit `src/lib/vocabularyData.ts`:
+
+### 1. Add a new media title
+```typescript
+export const MEDIA_TITLES: MediaTitle[] = [
+  // ... existing titles
+  { id: "yourMedia", displayName: "your media name", vocabularyCount: 2 },
+];
+```
+
+### 2. Add scene images for hover preview
+```typescript
+export const sceneData: Record<string, SceneEntry[]> = {
+  // ... existing scenes
+  yourMedia: [
+    { src: "/your-image.gif", offsetX: -460, offsetY: -190, rotate: -8 },
+    // ... add 2-3 scenes
+  ],
+};
+```
+
+### 3. Link media to vocabulary words
+```typescript
+export const mediaData: Record<string, MediaData> = {
+  // ... existing media
+  yourMedia: {
+    id: "yourMedia",
+    title: "Your Media Title",
+    vocabularyCount: 2,
+    words: ["word1", "word2"],
+    scenes: sceneData.yourMedia,
+  },
+};
+```
+
+### 4. Add vocabulary definitions
+```typescript
+export const vocabularyData: Record<string, VocabularyWord> = {
+  // ... existing words
+  word1: {
+    id: "word1",
+    word: "Word",
+    type: "Noun",
+    pronunciation: "[wɜːrd]",
+    simplePronunciation: "WURD",
+    frequency: "Common",
+    definition: "Your definition here...",
+    examples: [
+      "Example sentence 1.",
+      "Example sentence 2.",
+      "Example sentence 3.",
+    ],
+    // Optional fields:
+    rootWord: { /* ... */ },
+    wordFamily: { noun: [], verb: [], adjective: [] },
+    etymology: "Word origin...",
+    collocations: ["common phrase 1", "common phrase 2"],
+    usageNotes: ["Usage tip 1", "Usage tip 2"],
+    translation: {
+      language: "pt-BR",
+      text: "Tradução",
+      examples: [
+        { english: "English example", translated: "Exemplo traduzido" }
+      ]
+    },
+    mediaImage: "/your-image.gif", // Background for card
+  },
+};
+```
+
+## 🎨 Design Reference
+
+Based on [Anime-Scene-Gallery](https://github.com/mirayatech/Anime-Scene-Gallery) with modifications for vocabulary learning.
+
+## 📜 License
+
+MIT - Feel free to use for your own learning projects!
 
