@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { getVocabularyByWord, getMediaById } from "../lib/vocabularyData";
 import { useState, useEffect, useCallback } from "react";
@@ -23,6 +23,8 @@ const itemVariants = {
 const VocabularyDetailPage = () => {
   const { mediaId, wordId } = useParams<{ mediaId: string; wordId: string }>();
   const navigate = useNavigate();
+  const location = useLocation();
+  const fromRandom = (location.state as { fromRandom?: boolean })?.fromRandom;
   const word = wordId ? getVocabularyByWord(wordId) : undefined;
   const media = mediaId ? getMediaById(mediaId) : undefined;
   const [showTranslation, setShowTranslation] = useState(false);
@@ -204,7 +206,7 @@ const VocabularyDetailPage = () => {
           className="mb-8 flex items-center justify-between"
         >
           <Link
-            to={mediaId ? `/media/${mediaId}` : "/"}
+            to={fromRandom ? "/" : (mediaId ? `/media/${mediaId}` : "/")}
             className="inline-flex items-center text-zinc-500 hover:text-zinc-300 transition-colors"
           >
             <svg
@@ -220,7 +222,7 @@ const VocabularyDetailPage = () => {
                 d="M15 19l-7-7 7-7"
               />
             </svg>
-            Back to {media?.title || "Gallery"}
+            Back to {fromRandom ? "Gallery" : (media?.title || "Gallery")}
           </Link>
 
           {/* Keyboard navigation arrows */}

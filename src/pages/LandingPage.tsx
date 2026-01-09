@@ -33,7 +33,7 @@ const LandingPage = () => {
   const goToRandomWord = () => {
     const random = getRandomVocabulary();
     if (random) {
-      navigate(`/media/${random.mediaId}/word/${random.word.id}`);
+      navigate(`/media/${random.mediaId}/word/${random.word.id}`, { state: { fromRandom: true } });
     }
   };
 
