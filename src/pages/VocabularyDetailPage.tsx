@@ -1,7 +1,7 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { getVocabularyByWord, getMediaById } from "../lib/vocabularyData";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { getMediaColors } from "../lib/colors";
 
 // Animation variants for staggered fade-in
@@ -22,6 +22,7 @@ const itemVariants = {
 
 const VocabularyDetailPage = () => {
   const { mediaId, wordId } = useParams<{ mediaId: string; wordId: string }>();
+  const navigate = useNavigate();
   const word = wordId ? getVocabularyByWord(wordId) : undefined;
   const media = mediaId ? getMediaById(mediaId) : undefined;
   const [showTranslation, setShowTranslation] = useState(false);
@@ -29,6 +30,31 @@ const VocabularyDetailPage = () => {
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);
+
+  // Get current word index and adjacent words for keyboard navigation
+  const wordsList = media?.words || [];
+  const currentIndex = wordId ? wordsList.indexOf(wordId) : -1;
+  const prevWord = currentIndex > 0 ? wordsList[currentIndex - 1] : null;
+  const nextWord = currentIndex < wordsList.length - 1 ? wordsList[currentIndex + 1] : null;
+
+  // Keyboard navigation handler
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (!mediaId) return;
+      if (e.key === "ArrowLeft" && prevWord) {
+        navigate(`/media/${mediaId}/word/${prevWord}`);
+      } else if (e.key === "ArrowRight" && nextWord) {
+        navigate(`/media/${mediaId}/word/${nextWord}`);
+      }
+    },
+    [mediaId, prevWord, nextWord, navigate]
+  );
+
+  // Listen for keyboard events
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [handleKeyDown]);
 
   // Track mouse position for floating bubble (corner anchor - subtle movement)
   useEffect(() => {
@@ -175,7 +201,7 @@ const VocabularyDetailPage = () => {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
+          className="mb-8 flex items-center justify-between"
         >
           <Link
             to={mediaId ? `/media/${mediaId}` : "/"}
@@ -196,6 +222,47 @@ const VocabularyDetailPage = () => {
             </svg>
             Back to {media?.title || "Gallery"}
           </Link>
+
+          {/* Keyboard navigation arrows */}
+          <div className="hidden md:flex items-center gap-2 text-zinc-500 text-sm">
+            {prevWord ? (
+              <Link
+                to={`/media/${mediaId}/word/${prevWord}`}
+                className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
+                title="Previous word (←)"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                <span className="text-xs">Prev</span>
+              </Link>
+            ) : (
+              <span className="px-3 py-1.5 rounded-lg bg-zinc-800/50 text-zinc-600 cursor-not-allowed">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </span>
+            )}
+            <span className="text-zinc-600 text-xs">{currentIndex + 1}/{wordsList.length}</span>
+            {nextWord ? (
+              <Link
+                to={`/media/${mediaId}/word/${nextWord}`}
+                className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
+                title="Next word (→)"
+              >
+                <span className="text-xs">Next</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            ) : (
+              <span className="px-3 py-1.5 rounded-lg bg-zinc-800/50 text-zinc-600 cursor-not-allowed">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            )}
+          </div>
         </motion.div>
 
         <motion.div

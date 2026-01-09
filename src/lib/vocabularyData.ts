@@ -65,8 +65,8 @@ export const mediaData: Record<string, MediaData> = {
   dragonBall: {
     id: "dragonBall",
     title: "Dragon Ball Z",
-    vocabularyCount: 5,
-    words: ["jeopardize", "withstand", "pampered", "pay-through-the-nose", "stubborn"],
+    vocabularyCount: 16,
+    words: ["pester", "feistiest", "resemblance", "outstanding", "foe", "knack", "ridge", "search-your-feelings", "half-baked", "negate", "meddling", "jeopardize", "withstand", "pampered", "pay-through-the-nose", "stubborn"],
     scenes: sceneData.dragonBall,
   },
   f1: {
@@ -95,6 +95,691 @@ export const mediaData: Record<string, MediaData> = {
 // To add a new word: copy an existing entry and modify all fields
 // ═══════════════════════════════════════════════════════════════════════
 export const vocabularyData: Record<string, VocabularyWord> = {
+  pester: {
+    id: "pester",
+    word: "Pester",
+    type: "Verb",
+    pronunciation: "/ˈpɛstər/",
+    simplePronunciation: "PES-ter",
+    frequency: "Common",
+    contextLabel: "informal",
+    definition:
+      "To annoy or bother someone persistently, especially by repeated requests, questions, or actions; to nag or harass mildly but continually.",
+    examples: [
+      "The kids kept pestering their mom to buy ice cream.",
+      "Journalists pestered him for an autograph all day.",
+      "Stop pestering me with the same question!",
+    ],
+    etymology:
+      'Mid-16th century: from French empestrer "encumber/impede," influenced by "pest" (vermin); originally "overcrowd/infested," extended to nagging irritation.',
+    collocations: [
+      "pester somebody for something",
+      "pester somebody to do something",
+      "keep pestering",
+      "constantly pester",
+      "pester with questions/calls",
+    ],
+    usageNotes: [
+      "Informal; implies mild, repetitive annoyance (not severe harassment).",
+      "Synonyms: nag, badger, bug.",
+      "Often by children/animals.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Importunar / Incomodar / Encher o saco",
+      examples: [
+        {
+          english: "The kids kept pestering their mom to buy ice cream.",
+          translated:
+            "As crianças ficaram importunando a mãe para comprar sorvete.",
+        },
+        {
+          english: "Stop pestering me with the same question!",
+          translated: "Pare de me encher com a mesma pergunta!",
+        },
+      ],
+    },
+  },
+
+  feistiest: {
+    id: "feistiest",
+    word: "Feistiest",
+    type: "Adjective (superlative)",
+    pronunciation: "/ˈfaɪs.ti.ɪst/",
+    simplePronunciation: "FY-stee-ist",
+    frequency: "Common",
+    definition:
+      "Most feisty; superlative form describing the boldest, most spirited, quarrelsome, or energetic person/animal, often with pluck despite size/small stature.",
+    examples: [
+      "She's the feistiest debater in the club, never backing down.",
+      "The feistiest puppy barked loudest at the big dogs.",
+      "He was the feistiest candidate, full of fiery retorts.",
+    ],
+    rootWord: {
+      word: "Feisty",
+      pronunciation: "/ˈfaɪs.ti/",
+      definitions: [
+        {
+          type: "adjective",
+          frequency: "Most Common",
+          definition:
+            "Spirited, lively, full of determination/courage (positive).",
+          examples: [
+            "The feisty heroine fought against all odds.",
+          ],
+        },
+        {
+          type: "adjective",
+          frequency: "Common",
+          definition:
+            "Touchy, quarrelsome, aggressive (negative).",
+          examples: [
+            "Don't provoke that feisty old man.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["feistiness"],
+      adjective: ["feisty", "feistier", "feistiest"],
+      adverb: ["feistily"],
+      other: ["feist (small dog, archaic)"],
+    },
+    etymology:
+      'From "feist" (small yappy dog, 18th c. U.S.), variant of "fist" (break wind, small dog); from Middle English "fysten" (fart). Evolved to spirited/aggressive.',
+    collocations: [
+      "feisty challenger/spirit",
+      "feistiest fighter/dog",
+      "get feisty",
+      "feisty attitude",
+    ],
+    usageNotes: [
+      "Mostly positive (courageous underdog); can be negative (irritable).",
+      "Informal, U.S. origin.",
+      "Synonyms: spirited/plucky (pos.), scrappy/testy (neg.).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Mais corajoso(a) / Mais aguerrido(a) / Mais brigão/brigona",
+      examples: [
+        {
+          english: "She's the feistiest debater in the club, never backing down.",
+          translated:
+            "Ela é a debatedora mais aguerrida do clube, nunca recua.",
+        },
+        {
+          english: "The feistiest puppy barked loudest at the big dogs.",
+          translated:
+            "O filhote mais corajoso latiu mais alto para os cães grandes.",
+        },
+      ],
+    },
+  },
+
+  resemblance: {
+    id: "resemblance",
+    word: "Resemblance",
+    type: "Noun",
+    pronunciation: "/rɪˈzɛmbləns/",
+    simplePronunciation: "rih-ZEM-bluhnce",
+    frequency: "Common",
+    definition:
+      "The state or quality of looking like, being similar to, or sharing features with someone/something; a likeness, especially in appearance or superficial traits.",
+    examples: [
+      "The twins share a striking resemblance to each other.",
+      "She bears a strong family resemblance to her grandmother.",
+      "The new building bears little resemblance to the original design.",
+    ],
+    etymology:
+      'Middle English from Anglo-Norman French resembla(u)nce, from resembler "to be like," based on Latin similis "like."',
+    collocations: [
+      "bear a resemblance (close/striking/strong/uncanny)",
+      "family resemblance",
+      "striking/close resemblance",
+      "little/no/passing resemblance",
+      "resemblance between/to A and B",
+    ],
+    usageNotes: [
+      "Countable (points of resemblance) or uncountable (general similarity).",
+      "Often visual; 'uncanny' adds eerie note.",
+      "Synonyms: similarity, likeness.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Semelhança / Parecença",
+      examples: [
+        {
+          english: "The twins share a striking resemblance to each other.",
+          translated: "Os gêmeos compartilham uma semelhança marcante um com o outro.",
+        },
+        {
+          english: "She bears a strong family resemblance to her grandmother.",
+          translated: "Ela tem uma forte semelhança familiar com sua avó.",
+        },
+      ],
+    },
+  },
+
+  outstanding: {
+    id: "outstanding",
+    word: "Outstanding",
+    type: "Adjective",
+    pronunciation: "/aʊtˈstændɪŋ/",
+    simplePronunciation: "owt-STAN-ding",
+    senses: [
+      {
+        number: 1,
+        type: "adjective",
+        frequency: "Most Common",
+        definition:
+          "Extremely good, excellent, or superior; standing out above others in quality or achievement.",
+        examples: [
+          "She received an award for her outstanding performance.",
+          "The restaurant serves outstanding Italian cuisine.",
+          "He is an outstanding student with perfect grades.",
+        ],
+      },
+      {
+        number: 2,
+        type: "adjective",
+        frequency: "Common",
+        definition:
+          "Still to be done, paid, solved, or dealt with; remaining unsettled.",
+        examples: [
+          "There are several outstanding bills on the account.",
+          "Two tasks remain outstanding before deadline.",
+          "Outstanding issues delayed the project launch.",
+        ],
+      },
+      {
+        number: 3,
+        type: "adjective",
+        frequency: "Less Common",
+        definition:
+          "Very noticeable or prominent due to importance.",
+        examples: [
+          "The outstanding features include modern amenities.",
+          "An outstanding example of Gothic architecture.",
+        ],
+      },
+    ],
+    etymology:
+      'From "out-stand" (protrude/remain erect), Middle English; literal "standing out," figurative "excellent" by 1600s.',
+    collocations: [
+      "outstanding achievement/performance/job",
+      "outstanding debt/bills/issues",
+      "outstanding example/player/student",
+      "still outstanding",
+      "truly outstanding",
+    ],
+    usageNotes: [
+      "Context determines meaning (praise vs. pending).",
+      "Positive for excellence; neutral for unpaid.",
+      "Synonyms: excellent/superb (1), unpaid/pending (2).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Excepcional / Pendente",
+      examples: [
+        {
+          english: "She received an award for her outstanding performance.",
+          translated: "Ela recebeu um prêmio por seu desempenho excepcional.",
+        },
+        {
+          english: "There are several outstanding bills on the account.",
+          translated: "Existem várias contas pendentes na conta.",
+        },
+      ],
+    },
+  },
+
+  foe: {
+    id: "foe",
+    word: "Foe",
+    type: "Noun",
+    pronunciation: "/foʊ/",
+    simplePronunciation: "FOH",
+    frequency: "Common",
+    contextLabel: "literary/formal",
+    definition:
+      "An enemy or opponent, often personal or ideological; one who harbors enmity or opposes actively.",
+    examples: [
+      "The hero vanquished his greatest foe in battle.",
+      "Friend or foe, everyone respected her leadership.",
+      "The two nations united against a common foe.",
+    ],
+    etymology:
+      'Old English fāh "hostile" and gefā "enemy," from West Germanic; related to "feud." Used since Middle English for foes in literature/war.',
+    collocations: [
+      "bitter/mortal foe",
+      "common foe",
+      "friend or foe",
+      "greatest foe",
+      "vanquish/defeat a foe",
+    ],
+    usageNotes: [
+      "Archaic/literary in modern speech (use 'enemy' instead); poetic in fantasy/books.",
+      "Can be humorous (e.g., 'chocolate is my foe' on diet).",
+      "No BrE/AmE split.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Inimigo / Adversário",
+      examples: [
+        {
+          english: "The hero vanquished his greatest foe in battle.",
+          translated: "O herói venceu seu maior inimigo na batalha.",
+        },
+        {
+          english: "The two nations united against a common foe.",
+          translated: "As duas nações se uniram contra um inimigo comum.",
+        },
+      ],
+    },
+  },
+
+  knack: {
+    id: "knack",
+    word: "Knack",
+    type: "Noun",
+    pronunciation: "/næk/",
+    simplePronunciation: "NAK",
+    frequency: "Common",
+    contextLabel: "informal",
+    definition:
+      "A special skill, talent, or aptitude, often innate and hard to teach; a clever way of doing something.",
+    examples: [
+      "She has a knack for solving puzzles quickly.",
+      "He's got a real knack for making friends everywhere.",
+      "It takes a knack to open this jar properly.",
+    ],
+    etymology:
+      'Late Middle English: from obsolete "knack" meaning a sharp blow/sound (imitative, like Dutch "knak" crack/snap); evolved to "trick/skill."',
+    collocations: [
+      "knack for (doing) something",
+      "have/get a knack",
+      "real/uncanny/unhappy knack",
+      "knack of doing something",
+    ],
+    usageNotes: [
+      "Always singular; positive for natural talents, can be ironic (e.g., 'unhappy knack' for bad habits).",
+      "Synonyms: talent, flair, gift.",
+      "Informal, no BrE/AmE split.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Jeito / Talento / Dom",
+      examples: [
+        {
+          english: "She has a knack for solving puzzles quickly.",
+          translated: "Ela tem um jeito para resolver quebra-cabeças rapidamente.",
+        },
+        {
+          english: "He's got a real knack for making friends everywhere.",
+          translated: "Ele tem um verdadeiro talento para fazer amigos em todos os lugares.",
+        },
+      ],
+    },
+  },
+
+  ridge: {
+    id: "ridge",
+    word: "Ridge",
+    type: "Noun / Verb",
+    pronunciation: "/rɪdʒ/",
+    simplePronunciation: "RIJ",
+    senses: [
+      {
+        number: 1,
+        type: "noun",
+        frequency: "Most Common",
+        definition:
+          "A long, narrow elevated area of land, such as the top of a hill or mountain chain.",
+        examples: [
+          "We hiked along the windy ridge for stunning views.",
+          "The Blue Ridge Mountains form a famous ridge system.",
+          "They followed the mountain ridge to the summit.",
+        ],
+      },
+      {
+        number: 2,
+        type: "noun",
+        frequency: "Common",
+        definition:
+          "A raised line or strip on a surface, like on skin, a roof, or plowed ground.",
+        examples: [
+          "The ridges on the boot soles prevent slipping.",
+          "Water flowed along the ridge of the roof.",
+          "Fingerprints have unique ridges and whorls.",
+        ],
+      },
+      {
+        number: 3,
+        type: "noun",
+        frequency: "Less Common",
+        contextLabel: "geography/meteorology",
+        definition:
+          "An elongated elevation underwater (mid-ocean ridge) or a high-pressure zone in weather.",
+        examples: [
+          "The Mid-Atlantic Ridge is an undersea mountain ridge.",
+          "A ridge of high pressure brought clear skies.",
+        ],
+      },
+      {
+        number: 4,
+        type: "verb",
+        frequency: "Common",
+        definition:
+          "To form or cover with ridges; to rise into one.",
+        examples: [
+          "Farmers ridge the fields for better drainage.",
+          "The sand ridged up after the windstorm.",
+        ],
+      },
+    ],
+    etymology:
+      'From Old English hrycg "back, spine, crest," related to Dutch rug and German Rücken "back."',
+    collocations: [
+      "mountain/hill ridge",
+      "roof ridge",
+      "mid-ocean ridge",
+      "ridge of high pressure",
+      "along the ridge",
+    ],
+    usageNotes: [
+      "Primarily noun; verb less common.",
+      "No major BrE/AmE differences.",
+      "Synonyms: crest, peak (land); furrow (opposite).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Cume / Crista / Cumeeira",
+      examples: [
+        {
+          english: "We hiked along the windy ridge for stunning views.",
+          translated:
+            "Caminhamos ao longo do cume ventoso para vistas deslumbrantes.",
+        },
+        {
+          english: "The ridges on the boot soles prevent slipping.",
+          translated:
+            "As cristas nas solas das botas evitam escorregar.",
+        },
+      ],
+    },
+  },
+
+  "search-your-feelings": {
+    id: "search-your-feelings",
+    word: "Search your feelings",
+    type: "Expression (iconic movie quote)",
+    pronunciation: "/sɜːrtʃ jɔːr ˈfiːlɪŋz/",
+    simplePronunciation: "SURCH yor FEE-lingz",
+    frequency: "Common (in pop culture)",
+    definition:
+      "To examine your emotions or intuition deeply, especially to accept a difficult reality sensed subconsciously.",
+    examples: [
+      "You're denying it, but search your feelings—you know he's lying.",
+      "Search your feelings; deep down, you want to take the job.",
+      "Like Vader said, search your feelings before deciding.",
+    ],
+    etymology:
+      'Origin: Darth Vader says "Search your feelings, you know it to be true" during the "I am your father" revelation on Cloud City in Star Wars: Episode V - The Empire Strikes Back (1980).',
+    usageNotes: [
+      "Urges introspection to recognize an inner truth, often despite denial.",
+      "Frequently memed, GIF'd, or referenced in debates about emotions.",
+      "Not a traditional idiom but evokes self-reflection in pop culture.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Examine seus sentimentos / Busque em seus sentimentos",
+      examples: [
+        {
+          english:
+            "You're denying it, but search your feelings—you know he's lying.",
+          translated:
+            "Você está negando, mas examine seus sentimentos—você sabe que ele está mentindo.",
+        },
+        {
+          english: "Search your feelings; deep down, you want to take the job.",
+          translated:
+            "Busque em seus sentimentos; no fundo, você quer aceitar o emprego.",
+        },
+      ],
+    },
+  },
+
+  "half-baked": {
+    id: "half-baked",
+    word: "Half-Baked / Fully Baked",
+    type: "Idiom",
+    pronunciation: "/hæf beɪkt/ / /ˈfʊli beɪkt/",
+    simplePronunciation: "HALF-BAYKT / FULL-ee BAYKT",
+    senses: [
+      {
+        number: 1,
+        type: "idiom (adjective phrase)",
+        frequency: "Common",
+        definition:
+          "Imperfectly planned or developed; lacking thoroughness, often foolish or rushed—like undercooked bread.",
+        examples: [
+          "Your startup idea sounds half-baked; you haven't considered the costs.",
+          "That's a half-baked scheme—let's refine it first.",
+          "The policy proposal was half-baked and got rejected.",
+        ],
+      },
+      {
+        number: 2,
+        type: "idiom (adjective phrase)",
+        frequency: "Less Common",
+        contextLabel: "informal/slang extension",
+        definition:
+          "Fully developed, mature, and ready to implement; opposite of half-baked, implying completeness like perfectly cooked goods.",
+        examples: [
+          "Once the plan is fully baked, we'll launch next week.",
+          "Is your proposal fully baked, or still half-baked?",
+          "Great, the software is fully baked and bug-free now.",
+        ],
+      },
+    ],
+    etymology:
+      'From baking metaphors; "half-baked" originated in the 1600s literally for undercooked food, figurative use by 1800s.',
+    usageNotes: [
+      'Use "half-baked" disapprovingly for incomplete or poorly thought out ideas.',
+      '"Fully baked" is common in tech/business contexts to indicate readiness.',
+      "No major BrE/AmE differences.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Mal planejado / Totalmente desenvolvido",
+      examples: [
+        {
+          english:
+            "Your startup idea sounds half-baked; you haven't considered the costs.",
+          translated:
+            "Sua ideia de startup parece mal planejada; você não considerou os custos.",
+        },
+        {
+          english: "Once the plan is fully baked, we'll launch next week.",
+          translated:
+            "Assim que o plano estiver totalmente desenvolvido, lançaremos na próxima semana.",
+        },
+      ],
+    },
+  },
+
+  negate: {
+    id: "negate",
+    word: "Negate",
+    type: "Verb",
+    pronunciation: "/nɪˈɡeɪt/",
+    simplePronunciation: "ni-GAYT",
+    senses: [
+      {
+        number: 1,
+        type: "verb",
+        frequency: "Most Common",
+        contextLabel: "formal",
+        definition:
+          "To deny the existence, truth, or validity of something.",
+        examples: [
+          "The evidence negates his alibi completely.",
+          "Her testimony negated the prosecution's claims.",
+          "They tried to negate the rumors with facts.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        definition:
+          "To make something ineffective, invalid, or have no effect.",
+        examples: [
+          "Alcohol can negate the effects of some medicines.",
+          "The new discovery negated years of previous research.",
+          "Poor planning negated all their hard work.",
+        ],
+      },
+      {
+        number: 3,
+        type: "verb",
+        frequency: "Less Common",
+        contextLabel: "grammar/technical",
+        definition:
+          "To make a word, phrase, or statement negative.",
+        examples: [
+          'In logic, "not" negates the proposition.',
+          'The prefix "un-" negates the adjective.',
+        ],
+      },
+    ],
+    wordFamily: {
+      noun: ["negation", "negator"],
+      verb: ["negate", "negates", "negated", "negating"],
+      adjective: ["negative (related)"],
+      adverb: ["negatively"],
+    },
+    etymology:
+      'From Latin negatus, past participle of negare "to deny," from neg- "not" + the root of aiere "to say." Entered English in the 17th century.',
+    collocations: [
+      "negate the effects",
+      "completely negate",
+      "negate a claim/alibi/argument",
+      "negate progress/research",
+      "evidence negates",
+    ],
+    usageNotes: [
+      "Formal word; synonyms include deny, nullify, invalidate.",
+      "In grammar/logic contexts, it's technical.",
+      "No major BrE/AmE differences.",
+      'Avoid in casual speech—use "cancel out" instead.',
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Negar / Anular",
+      examples: [
+        {
+          english: "The evidence negates his alibi completely.",
+          translated: "A evidência nega completamente seu álibi.",
+        },
+        {
+          english: "Alcohol can negate the effects of some medicines.",
+          translated: "O álcool pode anular os efeitos de alguns medicamentos.",
+        },
+      ],
+    },
+  },
+
+  meddling: {
+    id: "meddling",
+    word: "Meddling",
+    type: "Noun / Adjective",
+    pronunciation: "/ˈmɛd.lɪŋ/",
+    simplePronunciation: "MED-ling",
+    senses: [
+      {
+        number: 1,
+        type: "noun",
+        frequency: "Most Common",
+        definition:
+          "The act of interfering or becoming involved in situations that are not your business, often in an annoying or harmful way.",
+        examples: [
+          "The bill has great potential for unnecessary bureaucratic meddling.",
+          "He warned against outside meddling in domestic affairs.",
+          "She was irritated by his incessant meddling.",
+        ],
+      },
+      {
+        number: 2,
+        type: "adjective",
+        frequency: "Common",
+        contextLabel: "disapproving, informal",
+        definition:
+          "Describing a person who interferes unwanted in others' affairs.",
+        examples: [
+          "He's such a meddling neighbor, always prying into everyone's business.",
+          "The meddling politician tried to influence the local vote.",
+          "Avoid that meddling relative during family gatherings.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Meddle",
+      pronunciation: "/ˈmɛd.əl/",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "Common",
+          definition:
+            "To interfere in or busy oneself unduly with something not involving oneself.",
+          examples: [
+            "Don't meddle with my plans.",
+            "Politicians accused of meddling in foreign elections.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["meddle (rare)", "meddling", "meddler"],
+      verb: ["meddle", "meddles", "meddled", "meddling"],
+      adjective: ["meddling"],
+      adverb: ["meddlingly (rare)"],
+    },
+    etymology:
+      'From Middle English medlen "to mix, mingle," from Old French medler, ultimately from Latin miscere "to mix." Sense of unwanted interference evolved in the 16th century.',
+    collocations: [
+      "bureaucratic meddling",
+      "constant meddling",
+      "foreign meddling",
+      "meddling in affairs",
+      "meddling neighbor/relative",
+    ],
+    usageNotes: [
+      'Often disapproving; "meddlesome" is a synonym adjective.',
+      "Noun form is uncountable.",
+      "No major BrE/AmE differences.",
+      'Avoid confusing with "medal" (award).',
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Intromissão / Intrometido(a)",
+      examples: [
+        {
+          english:
+            "The bill has great potential for unnecessary bureaucratic meddling.",
+          translated:
+            "O projeto tem grande potencial para intromissão burocrática desnecessária.",
+        },
+        {
+          english:
+            "He's such a meddling neighbor, always prying into everyone's business.",
+          translated:
+            "Ele é um vizinho tão intrometido, sempre bisbilhotando os assuntos de todos.",
+        },
+      ],
+    },
+  },
+
   jeopardize: {
     id: "jeopardize",
     word: "Jeopardize",
@@ -896,4 +1581,45 @@ export function getVocabularyForMedia(mediaId: string): VocabularyWord[] {
   return media.words
     .map((word) => vocabularyData[word])
     .filter((w): w is VocabularyWord => w !== undefined);
+}
+
+// Get all vocabulary words across all media
+export function getAllVocabulary(): { word: VocabularyWord; mediaId: string }[] {
+  const results: { word: VocabularyWord; mediaId: string }[] = [];
+  for (const [mediaId, media] of Object.entries(mediaData)) {
+    for (const wordId of media.words) {
+      const word = vocabularyData[wordId];
+      if (word) {
+        results.push({ word, mediaId });
+      }
+    }
+  }
+  return results;
+}
+
+// Get a random vocabulary word
+export function getRandomVocabulary(): { word: VocabularyWord; mediaId: string } | undefined {
+  const all = getAllVocabulary();
+  if (all.length === 0) return undefined;
+  return all[Math.floor(Math.random() * all.length)];
+}
+
+// Search vocabulary by word, definition, or examples
+export function searchVocabulary(query: string): { word: VocabularyWord; mediaId: string }[] {
+  if (!query.trim()) return [];
+  const q = query.toLowerCase();
+  const all = getAllVocabulary();
+  
+  return all.filter(({ word }) => {
+    // Search in word name
+    if (word.word.toLowerCase().includes(q)) return true;
+    // Search in definition
+    if (word.definition?.toLowerCase().includes(q)) return true;
+    // Search in senses definitions
+    if (word.senses?.some(s => s.definition.toLowerCase().includes(q))) return true;
+    // Search in examples
+    if (word.examples?.some(e => e.toLowerCase().includes(q))) return true;
+    if (word.senses?.some(s => s.examples?.some(e => e.toLowerCase().includes(q)))) return true;
+    return false;
+  });
 }

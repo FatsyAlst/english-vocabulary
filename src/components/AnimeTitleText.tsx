@@ -44,7 +44,7 @@ export const MediaTitleText = ({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.9 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className={`absolute -right-24 top-1/2 -translate-y-1/2 ${colors.gradient} text-white text-sm font-bold px-3 py-1.5 rounded-full shadow-lg pointer-events-none whitespace-nowrap`}
+            className={`absolute -right-24 top-1/2 -translate-y-1/2 z-50 ${colors.gradient} text-white text-sm font-bold px-3 py-1.5 rounded-full shadow-lg pointer-events-none whitespace-nowrap`}
           >
             {title.vocabularyCount} vocabularies
           </motion.div>

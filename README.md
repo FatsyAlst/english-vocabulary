@@ -5,10 +5,14 @@ A personal vocabulary learning tracker built with React and Framer Motion. Track
 ## ✨ Features
 
 - **Landing Gallery** - Browse media titles with parallax hover effects
+- **Search Bar** - Quickly find any word across all media (searches in definitions, examples, and word names)
+- **Random Word** - Click to jump to a random vocabulary word for quick review
 - **Vocabulary Cards** - Flip cards to reveal example sentences
 - **Detailed Definitions** - Full word explanations following Oxford dictionary format
-- **Audio Pronunciation** - Web Speech API for US/UK pronunciation
+- **Keyboard Navigation** - Use ← → arrow keys to navigate between words in vocabulary detail view
+- **Audio Pronunciation** - Web Speech API for US/UK pronunciation with premium voice selection
 - **Portuguese Translations** - Toggle bilingual examples for learners
+- **Floating Bubble Animation** - Custom media images appear with smooth parallax effects on specific words
 
 ## 🛠️ Technologies
 
