@@ -53,6 +53,7 @@ export type VocabularyWord = {
     adjective?: string[];
     adverb?: string[];
     related?: string[];
+    other?: string[];
   };
   etymology?: string;
   collocations?: string[];
