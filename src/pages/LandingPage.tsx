@@ -19,10 +19,18 @@ const LandingPage = () => {
   const navigate = useNavigate();
   useMobileWarning();
 
-  // Preload all GIFs on page startup
+  // Preload all GIFs on page startup with high priority
   useEffect(() => {
     Object.values(sceneData).forEach((scenes) => {
       scenes.forEach((scene) => {
+        // Create link preload for browser-level priority
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = scene.src;
+        document.head.appendChild(link);
+        
+        // Also create Image object to start loading immediately
         const img = new Image();
         img.src = scene.src;
       });

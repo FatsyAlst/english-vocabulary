@@ -24,7 +24,7 @@ export const MediaTitleText = ({
       <Link to={`/media/${title.id}`}>
         <motion.span
           data-text={title.id}
-          className="transition-colors duration-300 hover:text-zinc-500"
+          className="inline-block transition-colors duration-300 hover:text-zinc-500"
           animate={ANIMATION_CONFIG.initial}
           whileHover={ANIMATION_CONFIG.hover}
           transition={ANIMATION_CONFIG.transition}
