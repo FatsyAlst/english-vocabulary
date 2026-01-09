@@ -154,11 +154,11 @@ const LandingPage = () => {
       </div>
 
       {/* Scene previews on hover */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {hoveredText &&
           sceneData[hoveredText]?.map((item: SceneEntry, index: number) => (
             <ScenePreview
-              key={index}
+              key={`${hoveredText}-${index}`}
               hoveredText={hoveredText}
               item={item}
               index={index}
