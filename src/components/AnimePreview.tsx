@@ -40,7 +40,7 @@ export const ScenePreview = ({
     }}
   >
     <img
-      src={`${item.src}?v=${hoveredText}`}
+      src={item.src}
       alt={hoveredText}
       className="h-full w-full object-cover"
     />
