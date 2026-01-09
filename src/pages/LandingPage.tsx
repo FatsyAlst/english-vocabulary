@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import { ScenePreview } from "../components/AnimePreview";
@@ -18,6 +18,16 @@ const LandingPage = () => {
   const mousePosition = useMousePosition();
   const navigate = useNavigate();
   useMobileWarning();
+
+  // Preload all GIFs on page startup
+  useEffect(() => {
+    Object.values(sceneData).forEach((scenes) => {
+      scenes.forEach((scene) => {
+        const img = new Image();
+        img.src = scene.src;
+      });
+    });
+  }, []);
 
   // Handle search input
   const handleSearch = (query: string) => {
