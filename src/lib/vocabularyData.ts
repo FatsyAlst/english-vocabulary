@@ -23,7 +23,7 @@ import gohanPampered from "/gohan-pampered-kid.jpg";
 // MEDIA TITLES - Shown on landing page
 // ═══════════════════════════════════════════════════════════════════════
 export const MEDIA_TITLES: MediaTitle[] = [
-  { id: "dragonBall", displayName: "dragon ball z", vocabularyCount: 4 },
+  { id: "dragonBall", displayName: "dragon ball z", vocabularyCount: 31 },
   { id: "f1", displayName: "f1", vocabularyCount: 1 },
   { id: "peakyBlinders", displayName: "peaky blinders", vocabularyCount: 4 },
 ];
@@ -65,8 +65,8 @@ export const mediaData: Record<string, MediaData> = {
   dragonBall: {
     id: "dragonBall",
     title: "Dragon Ball Z",
-    vocabularyCount: 16,
-    words: ["pester", "feistiest", "resemblance", "outstanding", "foe", "knack", "ridge", "search-your-feelings", "half-baked", "negate", "meddling", "jeopardize", "withstand", "pampered", "pay-through-the-nose", "stubborn"],
+    vocabularyCount: 31,
+    words: ["boggling", "sluggish", "ambush", "lurk", "shrewd", "defiant", "grudge", "acquainted", "ample", "outrageous", "divert", "ponder", "stunt", "sucker", "ominous", "pester", "feistiest", "resemblance", "outstanding", "foe", "knack", "ridge", "search-your-feelings", "half-baked", "negate", "meddling", "jeopardize", "withstand", "pampered", "pay-through-the-nose", "stubborn"],
     scenes: sceneData.dragonBall,
   },
   f1: {
@@ -1395,6 +1395,1179 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         {
           english: "That's a stubborn stain — it won't come out.",
           translated: "Essa é uma mancha persistente — não sai.",
+        },
+      ],
+    },
+  },
+
+  boggling: {
+    id: "boggling",
+    word: "Boggling",
+    type: "Adjective",
+    pronunciation: "/ˈbɒɡ.lɪŋ/",
+    simplePronunciation: "BOG-ling",
+    frequency: "Most Common",
+    definition: "Causing great surprise, astonishment, or bewilderment; overwhelming or astounding (often in 'mind-boggling').",
+    examples: [
+      "The mind-boggling complexity of the universe.",
+      "The cost of the project is boggling.",
+      "It's boggling to think how fast time flies.",
+    ],
+    rootWord: {
+      word: "Boggle",
+      pronunciation: "/ˈbɒɡ.əl/",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "archaic",
+          definition: "To hesitate or be astonished; to shy away in fear.",
+          examples: [
+            "The old verb boggle meant to hesitate in astonishment.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["boggle", "boggler"],
+      verb: ["boggle", "boggles", "boggled", "boggling"],
+      adjective: ["boggling"],
+    },
+    etymology: "Verb 'boggle' from late 16th century Scots, probably from *bogle* 'hobgoblin, spectre' (Middle English *bugge* 'bugbear,' possibly Scandinavian). 'Mind-boggling' coined mid-20th century for 'astounding'.",
+    collocations: [
+      "Mind-boggling (complexity/speed/cost/sums)",
+      "Absolutely/completely boggling",
+      "Boggling the mind/imagination",
+    ],
+    usageNotes: [
+      "Mostly in 'mind-boggling' (informal, emphatic for incredible).",
+      "Implies overwhelming scale/effect.",
+      "Positive/neutral for amazement.",
+      "Synonyms: astounding, staggering.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Espantoso, atordoante, assombroso, alucinante (especialmente mind-boggling); desconcertante",
+      examples: [
+        {
+          english: "The mind-boggling complexity of the universe.",
+          translated: "A complexidade alucinante/espantosa do universo.",
+        },
+        {
+          english: "The cost of the project is boggling.",
+          translated: "O custo do projeto é atordoante.",
+        },
+        {
+          english: "It's boggling to think how fast time flies.",
+          translated: "É assombroso pensar o quão rápido o tempo passa.",
+        },
+      ],
+    },
+  },
+
+  sluggish: {
+    id: "sluggish",
+    word: "Sluggish",
+    type: "Adjective",
+    pronunciation: "/ˈslʌɡ.ɪʃ/",
+    simplePronunciation: "SLUG-ish",
+    frequency: "Most Common",
+    definition: "Moving, reacting, or working more slowly than normal and in a way that seems lazy; lacking energy or speed.",
+    examples: [
+      "He felt very heavy and sluggish after the meal.",
+      "The growth of the export market has helped to compensate for sluggish demand at home.",
+      "The sluggish black waters of the canal.",
+    ],
+    rootWord: {
+      word: "Slug",
+      pronunciation: "/slʌɡ/",
+      definitions: [
+        {
+          type: "noun",
+          frequency: "archaic",
+          definition: "A lazy person.",
+          examples: [
+            "The old word slug referred to someone lazy or slow-moving.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["sluggishness"],
+      adjective: ["sluggish", "sluggisher", "sluggishest"],
+      adverb: ["sluggishly"],
+    },
+    etymology: "Late Middle English: From the noun *slug* (lazy person) or verb *slug* (see sluggard) + *-ish*. Originally implied laziness/slothfulness, extended to slow motion by association with slugs.",
+    collocations: [
+      "Sluggish economy/growth/demand/sales",
+      "Sluggish traffic/movement",
+      "Feel sluggish",
+      "Sluggish response/start",
+    ],
+    usageNotes: [
+      "Applies to people (lethargic), economy (slow growth), machines/liquids (slow-moving).",
+      "Negative connotation of underperformance.",
+      "Synonyms: lethargic, slow, inactive; antonyms: brisk, lively.",
+      "Often temporary (e.g., after eating).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Lento, vagaroso, lerdo, preguiçoso, lento (economy); apático, letárgico",
+      examples: [
+        {
+          english: "He felt very heavy and sluggish after the meal.",
+          translated: "Ele se sentiu muito pesado e lerdo/preguiçoso após a refeição.",
+        },
+        {
+          english: "Sales were sluggish.",
+          translated: "As vendas estavam lentas/vagarosas.",
+        },
+        {
+          english: "The sluggish black waters of the canal.",
+          translated: "As águas pretas lentas/vagarosas do canal.",
+        },
+      ],
+    },
+  },
+
+  ambush: {
+    id: "ambush",
+    word: "Ambush",
+    type: "Noun / Verb",
+    pronunciation: "/ˈæm.bʊʃ/",
+    simplePronunciation: "AM-boosh",
+    senses: [
+      {
+        number: 1,
+        type: "noun",
+        frequency: "Most Common",
+        definition: "The act of hiding and waiting for somebody and then making a surprise attack on them.",
+        examples: [
+          "Two soldiers were killed in a terrorist ambush.",
+          "They were lying in ambush, waiting for the aid convoy.",
+          "We ran into an ambush in the valley.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        definition: "To make a surprise attack on somebody from a hidden position; to attack somebody unexpectedly.",
+        examples: [
+          "The guerrillas ambushed them near the bridge.",
+          "She was ambushed by reporters.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Busc/hus",
+      pronunciation: "/bʊsk/",
+      definitions: [
+        {
+          type: "noun",
+          frequency: "archaic",
+          definition: "Wood, bush (place of hiding).",
+          examples: [
+            "The Latin busc referred to a place of concealment in woods.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["ambush", "ambusher"],
+      verb: ["ambush", "ambushes", "ambushed", "ambushing"],
+      adjective: ["ambushed"],
+    },
+    etymology: "Middle English: From Old French *embusche* (noun) 'position of troops in hiding,' *embuschier* (verb) 'place in a wood,' from late Latin *imboscare* 'place in a bush/wood' (related to *busk* 'bush').",
+    collocations: [
+      "Lie in/wait in ambush",
+      "Lay/set up/prepare an ambush",
+      "Terrorist/enemy ambush",
+      "Ambush patrol/convoy",
+      "Deadly ambush",
+    ],
+    usageNotes: [
+      "Military core use; figurative for surprise (journalists ambushing celebs).",
+      "Noun countable/uncountable.",
+      "Verb transitive.",
+      "Synonyms: trap, snare.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Emboscada, armadilha, cilada (noun); Embuscar, emboscar, surpreender/atacar de surpresa (verb)",
+      examples: [
+        {
+          english: "Two soldiers were killed in a terrorist ambush.",
+          translated: "Dois soldados foram mortos em uma emboscada terrorista.",
+        },
+        {
+          english: "They were lying in ambush, waiting for the aid convoy.",
+          translated: "Eles estavam de emboscada, esperando o comboio de ajuda.",
+        },
+        {
+          english: "The guerrillas ambushed them near the bridge.",
+          translated: "Os guerrilheiros os emboscaram perto da ponte.",
+        },
+      ],
+    },
+  },
+
+  lurk: {
+    id: "lurk",
+    word: "Lurk",
+    type: "Verb",
+    pronunciation: "/lɜːk/",
+    simplePronunciation: "lurk",
+    senses: [
+      {
+        number: 1,
+        type: "verb",
+        frequency: "Most Common",
+        definition: "To wait somewhere secretly, especially because you are going to do something bad or illegal.",
+        examples: [
+          "Why are you lurking around outside my house?",
+          "A crocodile was lurking just below the surface.",
+          "I saw a man lurking in the shadows.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        definition: "When something unpleasant or dangerous lurks, it is present but not in an obvious way.",
+        examples: [
+          "At night, danger lurks in these streets.",
+          "The darker emotions that lurk beneath the surface.",
+        ],
+      },
+      {
+        number: 3,
+        type: "verb",
+        frequency: "Common",
+        contextLabel: "computing",
+        definition: "To read a discussion in a chat room, etc. on the internet, without taking part in it yourself.",
+        examples: [
+          "Many people lurk on forums without posting.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Lour/Lurk",
+      pronunciation: "/laʊər/",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "obsolete",
+          definition: "To frown or look menacing.",
+          examples: [
+            "The old word lour meant to frown threateningly.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["lurk", "lurker"],
+      verb: ["lurk", "lurks", "lurked", "lurking"],
+    },
+    etymology: "Middle English (c.1300): *Lurken* 'to hide, lie hidden,' probably from Scandinavian (Norwegian *lurka* 'sneak away,' Swedish *lurka* 'be slow'); or related to *luren* 'to frown, lurk' (from Middle Low German *luren*). Frequentative suffix *-k* as in 'talk.'",
+    collocations: [
+      "Lurk around/in the shadows/corners",
+      "Lurk behind/underneath/below the surface",
+      "Danger/threats lurk",
+      "Lurk about",
+    ],
+    usageNotes: [
+      "Implies stealthy, often sinister concealment or persistence.",
+      "For people: sneaky/menacing intent.",
+      "For abstract: latent threat.",
+      "Online slang: passive reading.",
+      "Synonyms: skulk (more furtive), prowl (animal-like).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Merodear, espreitar, rondar, esconder-se (secretly); emboscar, à espreita (ambush); espiar (online)",
+      examples: [
+        {
+          english: "Why are you lurking around outside my house?",
+          translated: "Por que você está merodeando ao redor da minha casa?",
+        },
+        {
+          english: "A crocodile was lurking just below the surface.",
+          translated: "Um crocodilo estava espreitando logo abaixo da superfície.",
+        },
+        {
+          english: "Someone was lurking in the shadows.",
+          translated: "Alguém estava à espreita nas sombras.",
+        },
+      ],
+    },
+  },
+
+  shrewd: {
+    id: "shrewd",
+    word: "Shrewd",
+    type: "Adjective",
+    pronunciation: "/ʃruːd/",
+    simplePronunciation: "shrood",
+    senses: [
+      {
+        number: 1,
+        type: "adjective",
+        frequency: "Most Common",
+        definition: "Clever at understanding and making judgements about a situation; having or showing good judgement.",
+        examples: [
+          "A shrewd businessman.",
+          "She is a shrewd judge of character.",
+          "Paul was too shrewd to be taken in by this argument.",
+        ],
+      },
+      {
+        number: 2,
+        type: "adjective",
+        frequency: "Common",
+        definition: "Showing good judgement and likely to be right.",
+        examples: [
+          "A shrewd move.",
+          "I have a shrewd idea who the mystery caller was.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Shrew",
+      pronunciation: "/ʃruː/",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "obsolete",
+          definition: "To curse; (noun) evil/mischievous person.",
+          examples: [
+            "The old word shrew meant an evil or mischievous person.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["shrewdness"],
+      adjective: ["shrewd", "shrewder", "shrewdest"],
+      adverb: ["shrewdly"],
+    },
+    etymology: "Middle English (originally 'evil in nature or character'): From *shrew* ('evil person/thing') or past participle of obsolete *shrew* 'to curse.' Evolved to 'cunning' (negative), gaining positive 'astute' sense during the 17th century.",
+    collocations: [
+      "Shrewd businessman/judge",
+      "Shrewd move/decision/observation/guess",
+      "Shrewd eyes/look",
+      "Financially/politically shrewd",
+      "Far from shrewd",
+    ],
+    usageNotes: [
+      "Positive connotation of practical intelligence/prudence (business, politics).",
+      "Less positive if implying cunning (vs. 'cunning' = deceitful).",
+      "Formal-ish; synonyms: astute, canny, sharp.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Astuto, sagaz, esperto (no bom sentido), perspicaz, esperto nos negócios",
+      examples: [
+        {
+          english: "A shrewd businessman.",
+          translated: "Um empresário astuto.",
+        },
+        {
+          english: "She is a shrewd judge of character.",
+          translated: "Ela é uma boa juíza de caráter astuta/sagaz.",
+        },
+        {
+          english: "A shrewd move.",
+          translated: "Uma jogada astuta.",
+        },
+      ],
+    },
+  },
+
+  defiant: {
+    id: "defiant",
+    word: "Defiant",
+    type: "Adjective",
+    pronunciation: "/dɪˈfaɪənt/",
+    simplePronunciation: "dih-FYE-uhnt",
+    frequency: "Most Common",
+    definition: "Openly refusing to obey somebody/something, sometimes in an aggressive way; boldly resisting authority or opposition.",
+    examples: [
+      "She had suddenly turned into a defiant teenager.",
+      "The terrorists sent a defiant message to the government.",
+      "Sylvia tossed back her dark hair in a gesture that was openly defiant.",
+    ],
+    rootWord: {
+      word: "Defy",
+      pronunciation: "/dɪˈfaɪ/",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "common",
+          definition: "To resist openly or boldly; to challenge.",
+          examples: [
+            "He defied the court's orders.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["defiance"],
+      adjective: ["defiant"],
+      adverb: ["defiantly"],
+      verb: ["defy", "defies", "defied"],
+    },
+    etymology: "Late 16th century: From French *défiant* or directly from *defiance* (from Latin *disfidare* 'renounce faith,' related to *fides* 'faith'). Implies breaking trust through bold resistance.",
+    collocations: [
+      "Defiant mood/attitude/air/gesture",
+      "Defiant teenager/child/attitude",
+      "Remain/stay defiant",
+      "Slightly/openly defiant",
+      "Look/appear defiant",
+    ],
+    usageNotes: [
+      "Connotes bold, often aggressive disobedience (e.g., vs. authority).",
+      "Positive in resistance contexts (e.g., civil rights); negative for rebellion.",
+      "Similar to 'insubordinate/bold/rebellious.'",
+      "Often with body language (gesture, stare).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Desafiante, desafiador, rebelde, insolente, provocante",
+      examples: [
+        {
+          english: "She had suddenly turned into a defiant teenager.",
+          translated: "Ela de repente se transformou em uma adolescente desafiante.",
+        },
+        {
+          english: "The terrorists sent a defiant message to the government.",
+          translated: "Os terroristas enviaram uma mensagem desafiante ao governo.",
+        },
+        {
+          english: "Sylvia tossed back her dark hair in a gesture that was openly defiant.",
+          translated: "Sylvia jogou o cabelo escuro para trás em um gesto abertamente desafiante.",
+        },
+      ],
+    },
+  },
+
+  grudge: {
+    id: "grudge",
+    word: "Grudge",
+    type: "Noun / Verb",
+    pronunciation: "/ɡrʌdʒ/",
+    simplePronunciation: "gruj",
+    senses: [
+      {
+        number: 1,
+        type: "noun",
+        frequency: "Most Common",
+        definition: "A feeling of anger or dislike towards somebody because of something bad they have done to you in the past, often lasting a long time.",
+        examples: [
+          "I bear him no grudge.",
+          "He has a grudge against the world.",
+          "She has harboured a grudge against me for years.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        definition: "To do or give something unwillingly; grudge doing something / grudge somebody something.",
+        examples: [
+          "I grudge having to pay so much tax.",
+          "He grudges the time he spends travelling to work.",
+          "You surely don't grudge her her success?",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Grutch",
+      pronunciation: "/ɡrʌtʃ/",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "obsolete",
+          definition: "To complain, murmur, or grumble.",
+          examples: [
+            "The old word grutch meant to complain bitterly.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["grudge", "grudger"],
+      verb: ["grudge", "grudges", "grudged", "grudging"],
+      adjective: ["grudging"],
+      adverb: ["grudgingly"],
+    },
+    etymology: "Late Middle English: Variant of obsolete *grutch* 'complain, murmur, grumble,' from Old French *grouchier* (unknown origin). Compare *grouch*. Noun sense (ill will) from c.1500; verb 'begrudge' from mid-15c.",
+    collocations: [
+      "Bear/hold/harbour/nurse a grudge (against somebody)",
+      "Have a grudge (against somebody)",
+      "Long-standing/old/personal grudge",
+      "Grudge match",
+      "Grudge doing something / grudge somebody something",
+    ],
+    usageNotes: [
+      "Noun implies persistent resentment; verb expresses reluctance (formal, rare in casual speech).",
+      "'Bear no grudge' = forgive.",
+      "'Grudging' (adj.) means reluctant/unwilling (e.g., grudging respect).",
+      "Not synonymous with 'grievance' (complaint).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Rancor, ressentimento, mágoa, inimizade, ojeriza (noun); Invejar, guardar rancor, fazer com má vontade, poupar (verb)",
+      examples: [
+        {
+          english: "I bear him no grudge.",
+          translated: "Eu não guardo rancor dele.",
+        },
+        {
+          english: "She has harboured a grudge against me for years.",
+          translated: "Ela nutre um rancor contra mim há anos.",
+        },
+        {
+          english: "I grudge having to pay so much tax.",
+          translated: "Eu lamento / faço com má vontade ter que pagar tanto imposto.",
+        },
+      ],
+    },
+  },
+
+  acquainted: {
+    id: "acquainted",
+    word: "Acquainted",
+    type: "Adjective",
+    pronunciation: "/əˈkweɪn.tɪd/",
+    simplePronunciation: "uh-KWAYN-tid",
+    senses: [
+      {
+        number: 1,
+        type: "adjective",
+        frequency: "Most Common",
+        contextLabel: "formal",
+        definition: "Familiar with something because you have read, seen, or experienced it.",
+        examples: [
+          "The students are already acquainted with the work of Shakespeare.",
+          "Employees should be fully acquainted with emergency procedures.",
+          "I am well acquainted with the facts of the case.",
+        ],
+      },
+      {
+        number: 2,
+        type: "adjective",
+        frequency: "Common",
+        definition: "Having met someone a few times but not being close friends; having some knowledge of a person.",
+        examples: [
+          "We got acquainted at the conference.",
+          "I am not personally acquainted with her.",
+          "I am well acquainted with her family.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Acquaint",
+      pronunciation: "/əˈkweɪnt/",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "common",
+          definition: "To make someone familiar with or aware of something.",
+          examples: [
+            "Let me acquaint you with the new procedures.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["acquaintance"],
+      adjective: ["acquainted", "unacquainted"],
+      verb: ["acquaint", "acquaints", "acquainted", "acquainting"],
+    },
+    etymology: "Early 13th century, 'personally known,' from past participle of *acquaint* (v.), which comes from Old French *acointer/acointier* 'make known, inform,' from Latin *accognitare* 'to make known,' related to *cognoscere* 'to know.'",
+    collocations: [
+      "Be/get/become acquainted with (something/somebody)",
+      "Well/fully/intimately acquainted with",
+      "Personally acquainted with",
+      "Get acquainted at/through (a conference, friends, etc.)",
+    ],
+    usageNotes: [
+      "Typically follows a verb: be/get/become acquainted (with), not used before a noun.",
+      "More formal than 'familiar with' or 'know.'",
+      "Often used in professional or written contexts.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Familiarizado (com), conhecedor (de), conhecido (de/por alguém), ter contato com",
+      examples: [
+        {
+          english: "The students are already acquainted with the work of Shakespeare.",
+          translated: "Os alunos já estão familiarizados com a obra de Shakespeare.",
+        },
+        {
+          english: "We got acquainted at the conference.",
+          translated: "Nós nos conhecemos / ficamos conhecidos um do outro na conferência.",
+        },
+        {
+          english: "I am not personally acquainted with her.",
+          translated: "Eu não a conheço pessoalmente.",
+        },
+      ],
+    },
+  },
+
+  ample: {
+    id: "ample",
+    word: "Ample",
+    type: "Adjective",
+    pronunciation: "/ˈæm.pəl/",
+    simplePronunciation: "AM-puhl",
+    senses: [
+      {
+        number: 1,
+        type: "adjective",
+        frequency: "Most Common",
+        definition: "Enough or more than enough; plentiful or generous in quantity, size, or amount.",
+        examples: [
+          "There was ample time to get to the airport.",
+          "Ample free parking is available.",
+          "They had ample money for the trip.",
+        ],
+      },
+      {
+        number: 2,
+        type: "adjective",
+        frequency: "Less Common",
+        definition: "(of a person's figure) Large or full, often in an attractive or euphemistic way.",
+        examples: [
+          "She stood with her hands on her ample hips.",
+          "These clothes belonged to a man of more ample girth.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Amplus",
+      pronunciation: "/ˈæmplʊs/",
+      definitions: [
+        {
+          type: "adjective",
+          frequency: "archaic",
+          definition: "Large, abundant.",
+          examples: [
+            "The Latin amplus means spacious or plentiful.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["ampleness", "amplitude"],
+      adjective: ["ample", "ampler", "amplest"],
+      adverb: ["amply"],
+      verb: ["amplify"],
+    },
+    etymology: "Late Middle English: Via French *ample* from Latin *amplus* 'large, abundant.' Originally described physical spaciousness, extended to sufficiency by 16th century.",
+    collocations: [
+      "Ample opportunity/time/space/evidence/proof",
+      "Ample room/parking/supply",
+      "Ample funds/resources",
+      "Ample bosom/hips/figure",
+    ],
+    usageNotes: [
+      "Positive connotation of abundance, more formal than 'plenty/enough.'",
+      "Euphemistic for body size (e.g., 'ample figure' = curvaceous/full).",
+      "Synonyms: abundant, generous, sufficient.",
+      "Avoid casual overuse like 'ample food.'",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Amplo (space); abundante, suficiente, de sobra, generoso (quantity); farto (figure)",
+      examples: [
+        {
+          english: "There was ample time to get to the airport.",
+          translated: "Havia tempo amplo/suficiente de sobra para chegar ao aeroporto.",
+        },
+        {
+          english: "Ample free parking is available.",
+          translated: "Há estacionamento gratuito amplo/disponível em abundância.",
+        },
+        {
+          english: "She stood with her hands on her ample hips.",
+          translated: "Ela ficou de pé com as mãos nos quadris fartos/generosos.",
+        },
+      ],
+    },
+  },
+
+  outrageous: {
+    id: "outrageous",
+    word: "Outrageous",
+    type: "Adjective",
+    pronunciation: "/aʊtˈreɪdʒəs/",
+    simplePronunciation: "owt-RAY-juhs",
+    senses: [
+      {
+        number: 1,
+        type: "adjective",
+        frequency: "Most Common",
+        definition: "Offensive, unacceptable, or shocking, causing moral indignation.",
+        examples: [
+          "'That's outrageous!' he protested.",
+          "Outrageous behaviour like this cannot be tolerated.",
+          "It is outrageous that these buildings remain empty while thousands have no homes.",
+        ],
+      },
+      {
+        number: 2,
+        type: "adjective",
+        frequency: "Common",
+        definition: "Very unusual, excessive, or bold in a shocking/amusing way (prices, clothes, statements).",
+        examples: [
+          "These prices are just outrageous (= much too high).",
+          "She says the most outrageous things sometimes.",
+          "Outrageous clothes and makeup defined the punk era.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Outrage",
+      pronunciation: "/ˈaʊtreɪdʒ/",
+      definitions: [
+        {
+          type: "noun",
+          frequency: "common",
+          definition: "An extremely offensive act or insult.",
+          examples: [
+            "The outrage caused by the scandal was widespread.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["outrage", "outrageousness"],
+      adjective: ["outrageous"],
+      adverb: ["outrageously"],
+      verb: ["outrage"],
+    },
+    etymology: "Late Middle English: From Old French *outrageus*, from *outrage* 'excess,' based on Latin *ultra* 'beyond.' Originally meant 'excessive'; moral shock sense from 16th century.",
+    collocations: [
+      "Outrageous behaviour/conduct",
+      "Outrageous prices/claims/statements",
+      "Absolutely/completely outrageous",
+      "Consider/regard as outrageous",
+      "Outrageous clothes/fashion",
+    ],
+    usageNotes: [
+      "Negative for moral wrongs (unacceptable); milder/positive for bold/shocking styles (e.g., fashion).",
+      "Intensifiers: absolutely, utterly, quite.",
+      "Similar to 'shocking/scandalous' but emphasizes excess.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Ultrajante, escandaloso, revoltante (moral shock); extravagante, exorbitante (excessive/bold)",
+      examples: [
+        {
+          english: "'That's outrageous!' he protested.",
+          translated: "\"Isso é ultrajante!\", ele protestou.",
+        },
+        {
+          english: "These prices are just outrageous.",
+          translated: "Esses preços são simplesmente exorbitantes/ultrajantes.",
+        },
+        {
+          english: "She says the most outrageous things sometimes.",
+          translated: "Ela diz as coisas mais extravagantes às vezes.",
+        },
+      ],
+    },
+  },
+
+  divert: {
+    id: "divert",
+    word: "Divert",
+    type: "Verb",
+    pronunciation: "/daɪˈvɜːt/",
+    simplePronunciation: "dye-VURT",
+    senses: [
+      {
+        number: 1,
+        type: "verb",
+        frequency: "Most Common",
+        definition: "To make somebody/something change direction, often passively (e.g., traffic, water flow).",
+        examples: [
+          "Northbound traffic will have to be diverted onto minor roads.",
+          "The course of the stream has now been diverted.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        definition: "To use money, materials, etc., for a different purpose than originally intended, often passively.",
+        examples: [
+          "More of the budget was diverted into promotions.",
+          "They were charged with illegally diverting public funds for private use.",
+        ],
+      },
+      {
+        number: 3,
+        type: "verb",
+        frequency: "Common",
+        definition: "To take somebody's thoughts or attention away from something; synonym: distract.",
+        examples: [
+          "The war diverted people's attention away from the economic situation.",
+          "He lied to divert attention from the real situation.",
+          "She managed to divert the baby onto a different activity.",
+        ],
+      },
+      {
+        number: 4,
+        type: "verb",
+        frequency: "Less Common",
+        contextLabel: "formal",
+        definition: "To entertain people, often passively.",
+        examples: [
+          "Children are easily diverted.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Vertere",
+      pronunciation: "/ˈvɜːrtəreɪ/",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "archaic",
+          definition: "To turn (core of diversion).",
+          examples: [
+            "The Latin root vertere means to turn or bend.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["diversion", "divertissement"],
+      verb: ["divert", "diverts", "diverted", "diverting"],
+      adjective: ["divertible", "diverting"],
+      adverb: ["divertingly"],
+    },
+    etymology: "Late Middle English: Via French from Latin *divertere*, from *di-* 'aside' + *vertere* 'to turn.' Originally nautical (turn ship aside), extended to attention/resources by 17th century.",
+    collocations: [
+      "Divert traffic/attention/resources/funds",
+      "Be diverted from... to...",
+      "Divert somebody's attention (away) from...",
+      "Divert a stream/river/course",
+      "Easily diverted",
+    ],
+    usageNotes: [
+      "Often passive (be diverted).",
+      "Direction sense literal (roads/water); attention/resources figurative.",
+      "Formal for entertainment.",
+      "Not confused with 'diverge' (separate).",
+      "British/American similar, but AmE stresses /ɪ/ in some dialects.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Desviar (direction/attention/traffic), Redirecionar/Transferir (funds/resources), Distrair/Entreter (attention/people)",
+      examples: [
+        {
+          english: "Northbound traffic will have to be diverted onto minor roads.",
+          translated: "O tráfego em direção ao norte terá que ser desviado para estradas secundárias.",
+        },
+        {
+          english: "More of the budget was diverted into promotions.",
+          translated: "Mais do orçamento foi transferido/redirecionado para promoções.",
+        },
+        {
+          english: "The war diverted people's attention away from the economic situation.",
+          translated: "A guerra desviou a atenção das pessoas da situação econômica.",
+        },
+      ],
+    },
+  },
+
+  ponder: {
+    id: "ponder",
+    word: "Ponder",
+    type: "Verb",
+    pronunciation: "/ˈpɒn.dər/",
+    simplePronunciation: "PON-der",
+    frequency: "Most Common",
+    contextLabel: "formal",
+    definition: "To think about something carefully and thoroughly for a period of time; to consider or reflect deeply.",
+    examples: [
+      "She pondered over his words.",
+      "They were left to ponder on the implications of the announcement.",
+      "The senator pondered the question for a moment.",
+      "We intend to ponder all the alternatives before acting.",
+      "'I wonder why,' she pondered aloud.",
+    ],
+    rootWord: {
+      word: "Pondus/Ponder-",
+      pronunciation: "/ˈpɒn.dər/",
+      definitions: [
+        {
+          type: "noun",
+          frequency: "archaic",
+          definition: "Weight (literal origin of mental weighing).",
+          examples: [
+            "The pondus of the decision weighed heavily on him.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["ponderance", "pondering"],
+      verb: ["ponder", "ponders", "pondered", "pondering"],
+      adjective: ["ponderable"],
+      adverb: ["ponderously"],
+    },
+    etymology: "Middle English (originally 'appraise, judge worth'): From Old French *ponderer* 'consider,' from Latin *ponderare* 'weigh, reflect on,' literally 'to weigh,' from *pondus, ponder-* 'weight' (from PIE root *pen-* 'to draw, stretch'). Mental sense from late 14th century.",
+    collocations: [
+      "Ponder (on/about/over) something",
+      "Ponder whether/what/how",
+      "Deeply/carefully/hard ponder",
+      "Pause/leave to ponder",
+      "Ponder aloud",
+    ],
+    usageNotes: [
+      "Formal/literary; often with prepositions on/over/about.",
+      "Differs from 'think' by implying prolonged, serious reflection.",
+      "Not used for quick thoughts.",
+      "Similar to 'contemplate/muse/ruminate' but less intense than 'brood.'",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Ponderar, refletir, considerar, meditar (sobre algo)",
+      examples: [
+        {
+          english: "She pondered over his words.",
+          translated: "Ela ponderou/refletiu sobre as palavras dele.",
+        },
+        {
+          english: "They were left to ponder on the implications of the announcement.",
+          translated: "Eles foram deixados para ponderar sobre as implicações do anúncio.",
+        },
+        {
+          english: "The senator pondered the question for a moment.",
+          translated: "O senador ponderou a pergunta por um momento.",
+        },
+      ],
+    },
+  },
+
+  stunt: {
+    id: "stunt",
+    word: "Stunt",
+    type: "Noun (primary); Verb (secondary)",
+    pronunciation: "/stʌnt/",
+    simplePronunciation: "stunt",
+    senses: [
+      {
+        number: 1,
+        type: "noun",
+        frequency: "Most Common",
+        definition: "An action displaying spectacular skill, daring, or exciting qualities, often performed by acrobats, athletes, or in films to entertain or promote.",
+        examples: [
+          "The motorcyclist performed a daring stunt jumping over the bus.",
+          "Hollywood stunt performers risk their lives for thrilling action scenes.",
+          "That viral video features an incredible parkour stunt on skyscrapers.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Less Common",
+        contextLabel: "informal",
+        definition: "To prevent or hinder the growth, development, or natural progress of something.",
+        examples: [
+          "Poor nutrition can stunt a child's physical development.",
+          "The economic crisis stunted the company's expansion plans.",
+          "Lack of sunlight stunted the growth of the houseplants.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Stunt",
+      pronunciation: "/stʌnt/",
+      definitions: [
+        {
+          type: "adjective",
+          frequency: "archaic/rare",
+          definition: "Stunted, undersized, or checked in growth (e.g., 'stunt trees'). Directly related to the verb sense.",
+          examples: [
+            "Stunt trees are common in poor soil.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["stunt", "stunting"],
+      verb: ["stunt", "stunts"],
+      adjective: ["stunted"],
+      adverb: ["stuntedly (rare)"],
+    },
+    etymology: "From Old English *stunt* meaning 'dull, stupid, foolish,' evolving in the 19th century to 'checked growth' (verb), and early 20th century to 'feat of daring' (noun, possibly from U.S. college slang for 'feat').",
+    collocations: [
+      "Perform a stunt",
+      "Death-defying stunt",
+      "Publicity stunt",
+      "Stunt double / stuntman",
+      "Stunt growth / stunt development",
+    ],
+    usageNotes: [
+      "As noun, often linked to action films or advertising ('publicity stunt'); as verb, commonly with 'growth' or 'development.'",
+      "Avoid confusing with 'stint' (a period of time or limit).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Acrobacia / Inibir",
+      examples: [
+        {
+          english: "The motorcyclist performed a daring stunt jumping over the bus.",
+          translated: "O motociclista realizou uma acrobacia ousada pulando sobre o ônibus.",
+        },
+        {
+          english: "Poor nutrition can stunt a child's physical development.",
+          translated: "Má nutrição pode inibir o desenvolvimento físico de uma criança.",
+        },
+        {
+          english: "That viral video features an incredible parkour stunt on skyscrapers.",
+          translated: "Aquele vídeo viral apresenta uma façanha incrível de parkour em arranha-céus.",
+        },
+      ],
+    },
+  },
+
+  sucker: {
+    id: "sucker",
+    word: "Sucker / Suckered",
+    type: "Noun / Verb (slang)",
+    pronunciation: "/ˈsʌkər/",
+    simplePronunciation: "SUK-er",
+    senses: [
+      {
+        number: 1,
+        type: "noun",
+        frequency: "Most Common",
+        contextLabel: "slang informal disapproving",
+        definition: "A gullible person easily tricked or cheated.",
+        examples: [
+          "What a sucker—he fell for the scam completely.",
+          "Tourists are easy suckers for street hustlers.",
+          "There's a sucker born every minute.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        contextLabel: "slang informal",
+        definition: "To deceive or trick someone into doing something foolish.",
+        examples: [
+          "They suckered him into investing in the fake scheme.",
+          "Don't let them sucker you with that sales pitch.",
+          "I got suckered by the 'limited time offer.'",
+        ],
+      },
+      {
+        number: 3,
+        type: "noun",
+        frequency: "Common",
+        definition: "State of being deceived; also plant shoot or lollipop (less relevant).",
+        examples: [
+          "He felt suckered after the bad deal.",
+          "Prune suckers from roses (botany).",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Sucker",
+      pronunciation: "/ˈsʌkər/",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "Common",
+          definition: "To deceive or trick someone into doing something foolish.",
+          examples: [
+            "They suckered him into investing in the fake scheme.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["sucker"],
+      verb: ["sucker", "suckers", "suckered", "suckering"],
+      adjective: ["suckering (rare)"],
+    },
+    etymology: "From 'suck' (deceive like nursing fool); 19th c. U.S. slang for gullible person, extended to verb.",
+    collocations: [
+      "Sucker for someone/something",
+      "Get suckered into",
+      "Poor sucker",
+      "Sucker punch/trap",
+      "Born sucker",
+    ],
+    usageNotes: [
+      "Slang, negative for deception/gullibility; 'sucker' noun disapproving, 'suckered' implies victimhood.",
+      "Informal NAmE. Synonyms: dupe/con (verb), mark/patsy (noun).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Otário / Enganar",
+      examples: [
+        {
+          english: "What a sucker—he fell for the scam completely.",
+          translated: "Que otário—ele caiu no golpe completamente.",
+        },
+        {
+          english: "They suckered him into investing in the fake scheme.",
+          translated: "Eles o enganaram para investir no esquema falso.",
+        },
+        {
+          english: "He felt suckered after the bad deal.",
+          translated: "Ele se sentiu enganado depois do mau negócio.",
+        },
+      ],
+    },
+  },
+
+  ominous: {
+    id: "ominous",
+    word: "Ominous",
+    type: "Adjective (formal/literary)",
+    pronunciation: "/ˈɑːmɪnəs/ (AmE); /ˈɒmɪnəs/ (BrE)",
+    simplePronunciation: "OM-uh-nuhs (AmE); OM-in-uhs (BrE)",
+    frequency: "Common",
+    contextLabel: "formal/literary",
+    definition: "Suggesting that something bad, unpleasant, or threatening is likely to happen; foreboding, portentous, or inauspicious.",
+    examples: [
+      "Ominous dark clouds gathered on the horizon, signaling a storm.",
+      "He spoke in an ominous tone about the future challenges.",
+      "The ominous silence after the explosion raised fears.",
+    ],
+    etymology: "Late 16th century from Latin ominosus 'full of foreboding,' from omen, omin- 'omen/portent.' Originally neutral for any omen; now mostly negative.",
+    collocations: [
+      "Ominous clouds/silence/rumble/threat",
+      "Ominous sign/portent",
+      "Ominous note/tone",
+      "Grow ominous",
+      "Loom ominously",
+    ],
+    usageNotes: [
+      "Evokes dread/forewarning; stronger than 'threatening.' Synonyms: foreboding, portentous, menacing.",
+      "No major BrE/AmE differences.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Ominoso / Sinal de mau agouro / Sinistro",
+      examples: [
+        {
+          english: "Ominous dark clouds gathered on the horizon, signaling a storm.",
+          translated: "Nuvens ominosas se reuniram no horizonte, sinalizando uma tempestade.",
+        },
+        {
+          english: "He spoke in an ominous tone about the future challenges.",
+          translated: "Ele falou em um tom ominoso sobre os desafios futuros.",
         },
       ],
     },
