@@ -1,29 +1,83 @@
 # 📚 English Vocabulary Tracker
 
-A personal vocabulary learning tracker built with React and Framer Motion. Track vocabulary words learned from your favorite media (anime, movies, series) with beautiful animations and organized definitions.
+**Learn English vocabulary through the media you love.**
 
-## ✨ Features
+A personal project by a Brazilian English learner who believes that media—anime, movies, series—is one of the richest resources for language acquisition. This isn't just a vocabulary list; it's a system for **tracking**, **studying**, and **truly fixing** new words in your memory.
 
-- **Landing Gallery** - Browse media titles with parallax hover effects
-- **Search Bar** - Quickly find any word across all media (searches in definitions, examples, and word names)
-- **Random Word** - Click to jump to a random vocabulary word for quick review
-- **Vocabulary Cards** - Flip cards to reveal example sentences
-- **Detailed Definitions** - Full word explanations following Oxford dictionary format
-- **Keyboard Navigation** - Use ← → arrow keys to navigate between words in vocabulary detail view
-- **Audio Pronunciation** - Web Speech API for US/UK pronunciation with premium voice selection
-- **Portuguese Translations** - Toggle bilingual examples for learners
-- **Floating Bubble Animation** - Custom media images appear with smooth parallax effects on specific words
+🌐 **Live Site:** [fatsyalst.github.io/english-vocabulary](https://fatsyalst.github.io/english-vocabulary)
 
-## 🛠️ Technologies
+---
 
-- `React 18` + `TypeScript`
-- `Framer Motion` - Smooth animations
-- `Tailwind CSS` - Styling
-- `React Router` - Navigation
-- `Vite` - Build tool
-- `Web Speech API` - Pronunciation
+## 🎯 The Philosophy
 
-## 🚦 Getting Started
+Traditional vocabulary learning can feel disconnected from real language. But when you learn words from content you genuinely enjoy, something changes:
+
+- **Context becomes memorable** — You remember *where* you heard a word
+- **Emotional connection** — The scenes, characters, and moments stick with you
+- **Natural usage** — You see how words are actually used, not just dictionary definitions
+
+This project takes that idea and adds structure: **track every word, understand it deeply, and practice until it sticks.**
+
+---
+
+## 📖 What's Inside
+
+### 🔤 Vocabulary Browser
+Currently tracking **72+ words** from Dragon Ball Z (English dub), each with:
+- Oxford-style definitions with part of speech and pronunciation
+- Multiple example sentences showing real usage
+- Portuguese translations (toggle on/off)
+- Word families, collocations, etymology, and usage notes
+- Audio pronunciation (US/UK voices)
+
+### 📝 Practice Exercises
+Downloadable PDF exercise sets organized by difficulty:
+
+| Difficulty | Focus |
+|------------|-------|
+| **Easy** | Recognition, matching, basic recall |
+| **Medium** | Context application, collocations, comprehension |
+| **Hard** | Production, analysis, creative usage |
+
+Each set includes **spaced repetition** — review words from previous sets to reinforce long-term retention.
+
+### 📰 Blog
+Supplementary reading documenting interesting linguistic discoveries and cultural notes encountered along the way.
+
+---
+
+## 🎓 Who Is This For?
+
+- **Non-native English speakers** at intermediate level or above
+- People who want to go from "I understand English" to "I sound natural and spontaneous"
+- Anyone who believes learning should be enjoyable, not just effective
+
+> **Note:** Basic English comprehension is recommended. This project assumes you can already follow English content and want to expand and refine your vocabulary.
+
+---
+
+## 💡 Why I Made This
+
+I created this because I realized I was passively consuming English content without truly *learning* from it. Words would come and go. I'd understand them in context but couldn't recall or use them later.
+
+So I asked myself: **What if I did this properly?**
+
+- Track every interesting word I encounter
+- Study it with real definitions and examples
+- Create exercises to practice actively
+- Review regularly so it actually sticks
+
+The result? I've been learning way more vocabulary and genuinely retaining it. After consistent practice, my English started sounding more natural and spontaneous—not just "correct."
+
+---
+
+## 🚀 Build Your Own
+
+**This is a personal project, and I encourage you to create something similar for yourself.**
+
+The real value isn't in using *my* word list—it's in building *your own* system around content *you* love. Whether it's anime, podcasts, movies, or books, the process of tracking and exercising vocabulary is what makes the difference.
+
+### Getting Started (for developers)
 
 ```bash
 # Install dependencies
@@ -36,104 +90,27 @@ npm run dev
 npm run build
 ```
 
-Open `http://localhost:5173` in your browser.
+---
 
-## 📁 Project Structure
+## 🛠️ Tech Stack
 
-```
-src/
-├── components/           # Reusable UI components
-│   ├── AnimeTitleText.tsx    # Media title with hover effects
-│   ├── AnimePreview.tsx      # Scene preview images
-│   └── VocabularyCard.tsx    # Flip card component
-├── pages/               # Page components
-│   ├── LandingPage.tsx       # Home gallery
-│   ├── MediaDetailPage.tsx   # Vocabulary grid
-│   └── VocabularyDetailPage.tsx  # Word details
-├── lib/                 # Data and types
-│   ├── types.ts              # TypeScript types
-│   ├── constant.ts           # Animation config
-│   └── vocabularyData.ts     # Mock data (edit this!)
-└── hooks/               # Custom React hooks
-```
+- `React 18` + `TypeScript`
+- `Framer Motion` — Smooth animations
+- `Tailwind CSS` — Styling
+- `React Router` — Navigation
+- `Vite` — Build tool
+- `Web Speech API` — Pronunciation
+- `LaTeX` — Exercise PDFs
 
-## 📝 Adding New Vocabulary
+---
 
-Edit `src/lib/vocabularyData.ts`:
+## 🎨 Credits
 
-### 1. Add a new media title
-```typescript
-export const MEDIA_TITLES: MediaTitle[] = [
-  // ... existing titles
-  { id: "yourMedia", displayName: "your media name", vocabularyCount: 2 },
-];
-```
+UI design inspired by [Anime-Scene-Gallery](https://github.com/mirayatech/Anime-Scene-Gallery) by Miraya, adapted for vocabulary learning.
 
-### 2. Add scene images for hover preview
-```typescript
-export const sceneData: Record<string, SceneEntry[]> = {
-  // ... existing scenes
-  yourMedia: [
-    { src: "/your-image.gif", offsetX: -460, offsetY: -190, rotate: -8 },
-    // ... add 2-3 scenes
-  ],
-};
-```
-
-### 3. Link media to vocabulary words
-```typescript
-export const mediaData: Record<string, MediaData> = {
-  // ... existing media
-  yourMedia: {
-    id: "yourMedia",
-    title: "Your Media Title",
-    vocabularyCount: 2,
-    words: ["word1", "word2"],
-    scenes: sceneData.yourMedia,
-  },
-};
-```
-
-### 4. Add vocabulary definitions
-```typescript
-export const vocabularyData: Record<string, VocabularyWord> = {
-  // ... existing words
-  word1: {
-    id: "word1",
-    word: "Word",
-    type: "Noun",
-    pronunciation: "[wɜːrd]",
-    simplePronunciation: "WURD",
-    frequency: "Common",
-    definition: "Your definition here...",
-    examples: [
-      "Example sentence 1.",
-      "Example sentence 2.",
-      "Example sentence 3.",
-    ],
-    // Optional fields:
-    rootWord: { /* ... */ },
-    wordFamily: { noun: [], verb: [], adjective: [] },
-    etymology: "Word origin...",
-    collocations: ["common phrase 1", "common phrase 2"],
-    usageNotes: ["Usage tip 1", "Usage tip 2"],
-    translation: {
-      language: "pt-BR",
-      text: "Tradução",
-      examples: [
-        { english: "English example", translated: "Exemplo traduzido" }
-      ]
-    },
-    mediaImage: "/your-image.gif", // Background for card
-  },
-};
-```
-
-## 🎨 Design Reference
-
-Based on [Anime-Scene-Gallery](https://github.com/mirayatech/Anime-Scene-Gallery) with modifications for vocabulary learning.
+---
 
 ## 📜 License
 
-MIT - Feel free to use for your own learning projects!
+MIT — Feel free to learn from this project and build your own!
 
