@@ -16,7 +16,7 @@ export const ANIMATION_CONFIG = {
 } as const;
 
 export const MEDIA_TITLES: MediaTitle[] = [
-  { id: "dragonBall", displayName: "dragon ball z", vocabularyCount: 31 },
+  { id: "dragonBall", displayName: "dragon ball z", vocabularyCount: 71 },
   { id: "f1", displayName: "f1", vocabularyCount: 1 },
   { id: "peakyBlinders", displayName: "peaky blinders", vocabularyCount: 4 },
 ];

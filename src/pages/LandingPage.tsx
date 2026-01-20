@@ -184,6 +184,30 @@ const LandingPage = () => {
             />
           ))}
       </AnimatePresence>
+
+      {/* Footer Links */}
+      <footer className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-6">
+        <Link
+          to="/blog"
+          className="text-zinc-500 text-sm font-medium hover:text-zinc-300 transition-colors duration-200"
+        >
+          blog
+        </Link>
+        <Link
+          to="/exercises"
+          className="text-zinc-600 text-sm font-medium hover:text-zinc-300 transition-colors duration-200"
+        >
+          exercises
+        </Link>
+        <a
+          href="https://github.com/FatsyAlst/english-vocabulary"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-zinc-700 text-sm font-medium hover:text-zinc-300 transition-colors duration-200"
+        >
+          github
+        </a>
+      </footer>
     </div>
   );
 };
