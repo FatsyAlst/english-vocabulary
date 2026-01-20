@@ -82,14 +82,17 @@ const ExercisesPage = () => {
                       Exercises
                     </a>
                     <button
-                      onClick={(e) => {
-                        e.preventDefault();
+                      onClick={async () => {
+                        const response = await fetch(set.exercisePdf);
+                        const blob = await response.blob();
+                        const url = window.URL.createObjectURL(blob);
                         const link = document.createElement('a');
-                        link.href = set.exercisePdf;
+                        link.href = url;
                         link.download = set.exercisePdf.split('/').pop() || 'exercises.pdf';
                         document.body.appendChild(link);
                         link.click();
                         document.body.removeChild(link);
+                        window.URL.revokeObjectURL(url);
                       }}
                       className="flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-700/30 text-zinc-400 hover:bg-zinc-700/50 hover:text-zinc-300 transition-all cursor-pointer"
                       title="Download Exercises"
@@ -115,14 +118,17 @@ const ExercisesPage = () => {
                       Answers
                     </a>
                     <button
-                      onClick={(e) => {
-                        e.preventDefault();
+                      onClick={async () => {
+                        const response = await fetch(set.answersPdf);
+                        const blob = await response.blob();
+                        const url = window.URL.createObjectURL(blob);
                         const link = document.createElement('a');
-                        link.href = set.answersPdf;
+                        link.href = url;
                         link.download = set.answersPdf.split('/').pop() || 'answers.pdf';
                         document.body.appendChild(link);
                         link.click();
                         document.body.removeChild(link);
+                        window.URL.revokeObjectURL(url);
                       }}
                       className="flex items-center justify-center w-10 h-10 rounded-lg bg-emerald-900/20 text-emerald-500 hover:bg-emerald-900/40 hover:text-emerald-400 transition-all cursor-pointer"
                       title="Download Answers"
