@@ -16,24 +16,24 @@ export const exerciseSets: ExerciseSet[] = [
     number: 1,
     title: "Vocabulary Practice Set 1",
     description: "First collection of vocabulary exercises covering foundational words and phrases.",
-    exercisePdf: `${BASE_URL}exercises/vocabulary-practice-1/vocabulary-exercises.pdf`,
-    answersPdf: `${BASE_URL}exercises/vocabulary-practice-1/vocabulary-answers.pdf`
+    exercisePdf: `${BASE_URL}exercises/vocabulary-practice-1/vocabulary-exercises-set-1.pdf`,
+    answersPdf: `${BASE_URL}exercises/vocabulary-practice-1/vocabulary-answers-set-1.pdf`
   },
   {
     id: "vocabulary-practice-2",
     number: 2,
     title: "Vocabulary Practice Set 2",
     description: "Second collection building on Set 1 with more advanced vocabulary.",
-    exercisePdf: `${BASE_URL}exercises/vocabulary-practice-2/vocabulary-exercises.pdf`,
-    answersPdf: `${BASE_URL}exercises/vocabulary-practice-2/vocabulary-answers.pdf`
+    exercisePdf: `${BASE_URL}exercises/vocabulary-practice-2/vocabulary-exercises-set-2.pdf`,
+    answersPdf: `${BASE_URL}exercises/vocabulary-practice-2/vocabulary-answers-set-2.pdf`
   },
   {
     id: "vocabulary-practice-3",
     number: 3,
     title: "Vocabulary Practice Set 3",
     description: "Third collection featuring idioms, collocations, and contextual usage.",
-    exercisePdf: `${BASE_URL}exercises/vocabulary-practice-3/vocabulary-exercises.pdf`,
-    answersPdf: `${BASE_URL}exercises/vocabulary-practice-3/vocabulary-answers.pdf`
+    exercisePdf: `${BASE_URL}exercises/vocabulary-practice-3/vocabulary-exercises-set-3.pdf`,
+    answersPdf: `${BASE_URL}exercises/vocabulary-practice-3/vocabulary-answers-set-3.pdf`
   }
 ];
 

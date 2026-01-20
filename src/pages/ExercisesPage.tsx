@@ -81,16 +81,23 @@ const ExercisesPage = () => {
                       </svg>
                       Exercises
                     </a>
-                    <a
-                      href={set.exercisePdf}
-                      download
-                      className="flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-700/30 text-zinc-400 hover:bg-zinc-700/50 hover:text-zinc-300 transition-all"
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const link = document.createElement('a');
+                        link.href = set.exercisePdf;
+                        link.download = set.exercisePdf.split('/').pop() || 'exercises.pdf';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                      }}
+                      className="flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-700/30 text-zinc-400 hover:bg-zinc-700/50 hover:text-zinc-300 transition-all cursor-pointer"
                       title="Download Exercises"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
-                    </a>
+                    </button>
                   </div>
 
                   {/* Answers PDF */}
@@ -107,16 +114,23 @@ const ExercisesPage = () => {
                       </svg>
                       Answers
                     </a>
-                    <a
-                      href={set.answersPdf}
-                      download
-                      className="flex items-center justify-center w-10 h-10 rounded-lg bg-emerald-900/20 text-emerald-500 hover:bg-emerald-900/40 hover:text-emerald-400 transition-all"
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const link = document.createElement('a');
+                        link.href = set.answersPdf;
+                        link.download = set.answersPdf.split('/').pop() || 'answers.pdf';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                      }}
+                      className="flex items-center justify-center w-10 h-10 rounded-lg bg-emerald-900/20 text-emerald-500 hover:bg-emerald-900/40 hover:text-emerald-400 transition-all cursor-pointer"
                       title="Download Answers"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
