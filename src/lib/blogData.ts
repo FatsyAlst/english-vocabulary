@@ -1,3 +1,6 @@
+// Base URL for assets (handles GitHub Pages deployment)
+const BASE_URL = import.meta.env.BASE_URL || '/';
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -17,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     title: "Why is \"uncanny\" not the opposite of \"canny\"?",
     slug: "uncanny-not-opposite-of-canny",
     excerpt: "A fascinating journey into etymology reveals how two seemingly related words diverged into completely different meanings over centuries.",
-    coverImage: "/blog/uncanny-cover.jpg",
+    coverImage: `${BASE_URL}blog/uncanny-cover.jpg`,
     categories: ["Vocabulary", "Etymology"],
     publishedAt: "2026-01-20",
     readingTime: 5,

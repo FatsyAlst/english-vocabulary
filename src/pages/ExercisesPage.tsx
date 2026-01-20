@@ -43,9 +43,9 @@ const ExercisesPage = () => {
           {exerciseSets.map((set, index) => (
             <motion.div
               key={set.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: 0.1 + index * 0.05 }}
               className="p-6 rounded-2xl bg-zinc-800/40 border border-zinc-800 hover:border-zinc-700 transition-all duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-center gap-6">
