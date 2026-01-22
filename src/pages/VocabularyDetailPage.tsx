@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { getVocabularyByWord, getMediaById } from "../lib/vocabularyData";
 import { useState, useEffect, useCallback } from "react";
 import { getMediaColors } from "../lib/colors";
+import { Tooltip } from "../components/TooltipCard";
+import { MovingBorderButton } from "../components/MovingBorder";
 
 // Animation variants for staggered fade-in
 const containerVariants = {
@@ -30,8 +32,6 @@ const VocabularyDetailPage = () => {
   const [showTranslation, setShowTranslation] = useState(false);
   const colors = mediaId ? getMediaColors(mediaId) : getMediaColors("default");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [scrollY, setScrollY] = useState(0);
 
   // Get current word index and adjacent words for keyboard navigation
   const wordsList = media?.words || [];
@@ -59,20 +59,6 @@ const VocabularyDetailPage = () => {
   }, [handleKeyDown]);
 
   // Track mouse position for floating bubble (corner anchor - subtle movement)
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
-    };
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // Load voices when available
   useEffect(() => {
     const loadVoices = () => {
       const availableVoices = speechSynthesis.getVoices();
@@ -164,40 +150,33 @@ const VocabularyDetailPage = () => {
     );
   }
 
+  // Tooltip content for "pampered kid/child" collocation
+  const PamperedKidTooltip = () => (
+    <div className="w-56">
+      <img
+        src={word?.mediaImage}
+        alt="Gohan - Pampered Kid"
+        className="w-full h-32 object-cover rounded-md mb-3"
+      />
+      <p className="text-lg font-bold text-white mb-2">"Pampered Kid"</p>
+      <p className="text-xs text-zinc-400 leading-relaxed">
+        In Dragon Ball Z, Piccolo uses this expression when he first begins training young Gohan after the battle with Raditz. Piccolo saw the 4-year-old Gohan as a soft, sheltered child who had been coddled by his overprotective mother Chi-Chi and needed to be toughened up to face the incoming Saiyan threat.
+      </p>
+    </div>
+  );
+
+  // Tooltip content for "stack up against" collocation
+  const StackUpAgainstTooltip = () => (
+    <div className="w-56">
+      <p className="text-lg font-bold text-white mb-2">"Stack Up Against"</p>
+      <p className="text-xs text-zinc-400 leading-relaxed">
+        In Dragon Ball Z, Goku uses this phrase when he leaves the Hyperbolic Time Chamber and asks Korin how he stacks up against Cell.
+      </p>
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-zinc-900 relative">
-      {/* Floating Bubble - corner anchor with subtle cursor influence */}
-      {word?.mediaImage && (
-        <motion.div
-          className="fixed w-24 h-24 rounded-full overflow-hidden pointer-events-none z-50 hidden md:block"
-          animate={{
-            // Corner anchor (bottom-right) with subtle cursor influence
-            x: window.innerWidth - 140 + (mousePos.x - window.innerWidth / 2) * 0.05,
-            y: window.innerHeight - 140 + (mousePos.y - window.innerHeight / 2) * 0.05,
-            opacity: Math.max(0.2, 1 - scrollY / 400), // Fade on scroll
-          }}
-          transition={{
-            type: "spring",
-            damping: 40,
-            stiffness: 80,
-            mass: 1.2,
-          }}
-          style={{
-            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
-            backdropFilter: "blur(8px)",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
-          }}
-        >
-          {/* Glass overlay */}
-          <div className="absolute inset-0 bg-white/5 z-10 pointer-events-none" />
-          <motion.img
-            src={word.mediaImage}
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
-      )}
-
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-8 md:px-8">
         {/* Navigation */}
         <motion.div
@@ -483,14 +462,70 @@ const VocabularyDetailPage = () => {
                 🔹 Common Collocations
               </h2>
               <div className="flex flex-wrap gap-2">
-                {word.collocations.map((collocation, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1.5 bg-zinc-800 rounded-full text-sm text-zinc-300"
-                  >
-                    {collocation}
-                  </span>
-                ))}
+                {word.collocations.map((collocation, index) => {
+                  // Special handling for "pampered kid/child" collocation
+                  const isPamperedKidCollocation = 
+                    word.word?.toLowerCase() === "pampered" && 
+                    (collocation.toLowerCase().includes("pampered kid") || 
+                     collocation.toLowerCase().includes("pampered child")) &&
+                    word.mediaImage;
+
+                  // Special handling for "stack up against" collocation
+                  const isStackUpAgainstCollocation =
+                    word.word?.toLowerCase() === "stack up" &&
+                    collocation.toLowerCase().includes("stack up against");
+
+                  if (isPamperedKidCollocation) {
+                    return (
+                      <Tooltip
+                        key={index}
+                        content={<PamperedKidTooltip />}
+                        containerClassName=""
+                      >
+                        <MovingBorderButton
+                          as="span"
+                          borderRadius="9999px"
+                          containerClassName="cursor-pointer"
+                          className="px-3 py-1.5 bg-zinc-800 text-sm font-semibold text-zinc-200"
+                          duration={3000}
+                          style={{ "--border-color": colors.hex } as React.CSSProperties}
+                        >
+                          {collocation}
+                        </MovingBorderButton>
+                      </Tooltip>
+                    );
+                  }
+
+                  if (isStackUpAgainstCollocation) {
+                    return (
+                      <Tooltip
+                        key={index}
+                        content={<StackUpAgainstTooltip />}
+                        containerClassName=""
+                      >
+                        <MovingBorderButton
+                          as="span"
+                          borderRadius="9999px"
+                          containerClassName="cursor-pointer"
+                          className="px-3 py-1.5 bg-zinc-800 text-sm font-semibold text-zinc-200"
+                          duration={3000}
+                          style={{ "--border-color": colors.hex } as React.CSSProperties}
+                        >
+                          {collocation}
+                        </MovingBorderButton>
+                      </Tooltip>
+                    );
+                  }
+
+                  return (
+                    <span
+                      key={index}
+                      className="px-3 py-1.5 bg-zinc-800 rounded-full text-sm text-zinc-300"
+                    >
+                      {collocation}
+                    </span>
+                  );
+                })}
               </div>
             </motion.section>
           )}

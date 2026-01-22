@@ -52,6 +52,9 @@ export type VocabularyWord = {
     verb?: string[];
     adjective?: string[];
     adverb?: string[];
+    phrasal?: string[];
+    phrasal_verb?: string[];
+    compound?: string[];
     related?: string[];
     other?: string[];
   };

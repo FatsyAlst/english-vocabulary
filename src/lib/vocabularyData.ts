@@ -23,7 +23,7 @@ import gohanPampered from "/gohan-pampered-kid.jpg";
 // MEDIA TITLES - Shown on landing page
 // ═══════════════════════════════════════════════════════════════════════
 export const MEDIA_TITLES: MediaTitle[] = [
-  { id: "dragonBall", displayName: "dragon ball z", vocabularyCount: 68 },
+  { id: "dragonBall", displayName: "dragon ball z", vocabularyCount: 72 },
   { id: "f1", displayName: "f1", vocabularyCount: 1 },
   { id: "peakyBlinders", displayName: "peaky blinders", vocabularyCount: 4 },
 ];
@@ -65,8 +65,8 @@ export const mediaData: Record<string, MediaData> = {
   dragonBall: {
     id: "dragonBall",
     title: "Dragon Ball Z",
-    vocabularyCount: 71,
-    words: ["scum", "safe-and-sound", "hideous", "scatter", "fierce", "grip", "threshold", "eager", "uptight", "bustling", "lucky-break", "cunning", "thereby", "unquenchable", "fiendish", "savory", "grin", "grievous", "uncanny", "nuisance", "twisted-mind", "halt", "sass", "canopy", "seized", "mischievous", "foreboding", "dicey", "tossed", "loom", "sicken", "insidious", "ensued", "diaper", "wayside", "brazen", "ruffled", "dizzy", "preposterous", "hasten", "boggling", "sluggish", "ambush", "lurk", "shrewd", "defiant", "grudge", "acquainted", "ample", "outrageous", "divert", "ponder", "stunt", "sucker", "ominous", "pester", "feistiest", "resemblance", "outstanding", "foe", "knack", "ridge", "search-your-feelings", "half-baked", "negate", "meddling", "jeopardize", "withstand", "pampered", "pay-through-the-nose", "stubborn"],
+    vocabularyCount: 86,
+    words: ["ingenious", "stack-up", "buckle-down", "buckle", "harness", "gang-up", "stick-around", "pooper", "plowing", "flaunt", "slew", "bulged", "maimed", "sloppy", "plaguing", "scum", "safe-and-sound", "hideous", "scatter", "fierce", "grip", "threshold", "eager", "uptight", "bustling", "lucky-break", "cunning", "thereby", "unquenchable", "fiendish", "savory", "grin", "grievous", "uncanny", "nuisance", "twisted-mind", "halt", "sass", "canopy", "seized", "mischievous", "foreboding", "dicey", "tossed", "loom", "sicken", "insidious", "ensued", "diaper", "wayside", "brazen", "ruffled", "dizzy", "preposterous", "hasten", "boggling", "sluggish", "ambush", "lurk", "shrewd", "defiant", "grudge", "acquainted", "ample", "outrageous", "divert", "ponder", "stunt", "sucker", "ominous", "pester", "feistiest", "resemblance", "outstanding", "foe", "knack", "ridge", "search-your-feelings", "half-baked", "negate", "meddling", "jeopardize", "withstand", "pampered", "pay-through-the-nose", "stubborn"],
     scenes: sceneData.dragonBall,
   },
   f1: {
@@ -95,6 +95,1090 @@ export const mediaData: Record<string, MediaData> = {
 // To add a new word: copy an existing entry and modify all fields
 // ═══════════════════════════════════════════════════════════════════════
 export const vocabularyData: Record<string, VocabularyWord> = {
+  "buckle-down": {
+    id: "buckle-down",
+    word: "Buckle Down",
+    type: "Phrasal Verb (intransitive, informal)",
+    pronunciation: "[ˈbʌkəl daʍn]",
+    simplePronunciation: "BUK-uhl down",
+    senses: [
+      {
+        number: 1,
+        type: "phrasal verb",
+        frequency: "Most Common",
+        definition: "To start working seriously and with determination, often after a period of procrastination, distraction, or relaxation, focusing hard on a task.",
+        examples: [
+          "It's time to buckle down and study for the exams.",
+          "After vacation, I need to buckle down on my project deadlines.",
+          "The team buckled down to finish the report before the meeting.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Buckle",
+      pronunciation: "[ˈbʌkəl]",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "Most Common",
+          definition: "To fasten or prepare (like buckling a belt/armor); figuratively, to gird oneself for effort.",
+          examples: [
+            "Buckle your seatbelt before driving.",
+            "The soldiers buckled their armor for battle.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      phrasal_verb: ["buckle down", "buckles down", "buckled down", "buckling down"],
+      related: ["buckle up", "buckle under", "buckle to"],
+    },
+    etymology: "From 16th c. British 'buckle to/down' ('prepare like buckling armor'); U.S. form 'buckle down' from 1865 (*Atlantic Monthly*); earlier 'buckle to' (1712). Related to 'knuckle down' (marbles game, concentration).",
+    collocations: [
+      "buckle down to + task/study/work",
+      "time to buckle down",
+      "buckle down and study",
+      "buckle down on deadlines",
+    ],
+    usageNotes: [
+      "Informal, motivational; implies getting serious/focused.",
+      "Often used for studying, work, or challenges.",
+      "Suggests determination and effort after a period of inactivity or distraction.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Meter a mão na massa / Botar a cara no trabalho / Se concentrar e trabalhar duro com determinação",
+      examples: [
+        {
+          english: "It's time to buckle down and study for the exams.",
+          translated: "É hora de se concentrar e estudar para as provas.",
+        },
+        {
+          english: "After vacation, I need to buckle down on my project deadlines.",
+          translated: "Depois das férias, preciso botar a cara no trabalho para cumprir os prazos dos projetos.",
+        },
+        {
+          english: "The team buckled down to finish the report before the meeting.",
+          translated: "A equipe se concentrou e trabalhou duro para terminar o relatório antes da reunião.",
+        },
+      ],
+    },
+  },
+
+  "buckle": {
+    id: "buckle",
+    word: "Buckle",
+    type: "Noun / Verb",
+    pronunciation: "[ˈbʌkəl]",
+    simplePronunciation: "BUK-uhl",
+    senses: [
+      {
+        number: 1,
+        type: "noun",
+        frequency: "Most Common",
+        definition: "A metal or plastic fastener used to join the ends of a belt, strap, or similar item.",
+        examples: [
+          "The belt buckle was made of solid gold.",
+          "He polished the shoe buckle until it shone.",
+          "The harness had a sturdy buckle for safety.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        definition: "To fasten or close something with a buckle.",
+        examples: [
+          "Buckle your seatbelt before driving.",
+          "She buckled her sandals before the walk.",
+          "Buckle the bag shut to keep it secure.",
+        ],
+      },
+      {
+        number: 3,
+        type: "verb",
+        frequency: "Common",
+        definition: "To bend, warp, or collapse under pressure, heat, or weight. (intransitive)",
+        examples: [
+          "The bridge buckled under the heavy traffic.",
+          "The hot pavement began to buckle.",
+          "His knees buckled, and he fell to the ground.",
+        ],
+      },
+      {
+        number: 4,
+        type: "verb",
+        frequency: "Common",
+        definition: "To cause to bend or collapse; or to give way under stress/pressure. (transitive/figurative)",
+        examples: [
+          "The impact buckled the car's front end.",
+          "She refused to buckle under the intense pressure.",
+          "The team buckled in the final minutes of the game.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Buckle",
+      pronunciation: "[ˈbʌkəl]",
+      definitions: [
+        {
+          type: "noun/verb",
+          frequency: "Most Common",
+          definition: "Base form: a metal/plastic fastener; or to fasten, bend, or collapse.",
+          examples: [
+            "Metal buckles hold the straps together.",
+            "The steel girders buckled under stress.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["buckle"],
+      verb: ["buckle", "buckles", "buckled", "buckling"],
+      adjective: ["buckled"],
+    },
+    etymology: "From Old French *bocle* (12th c.) 'boss of a shield,' from Latin *buccula* 'cheek strap of a helmet,' diminutive of *bucca* 'cheek.' Verb 'bend/collapse' from 1520s, from the idea of arching/bulging like a shield boss.",
+    collocations: [
+      "belt/shoe/seatbelt buckle",
+      "buckle up",
+      "buckle under pressure/stress",
+      "knees/legs buckle",
+      "buckle down",
+      "buckle closed",
+    ],
+    usageNotes: [
+      "'Buckle up' is a common safety phrase for seatbelts.",
+      "Figurative 'buckle under' means to yield or fail.",
+      "'Buckle down' means to work hard or apply oneself.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Fivela / Fecho de cinto / Abotoar / Fechar com fivela / Prender / Entortar / Ceder",
+      examples: [
+        {
+          english: "Buckle your seatbelt before driving.",
+          translated: "Prenda o cinto de segurança antes de dirigir.",
+        },
+        {
+          english: "The hot pavement began to buckle.",
+          translated: "O asfalto quente começou a entortar.",
+        },
+        {
+          english: "She refused to buckle under the intense pressure.",
+          translated: "Ela se recusou a ceder sob a intensa pressão.",
+        },
+      ],
+    },
+  },
+
+  "harness": {
+    id: "harness",
+    word: "Harness",
+    type: "Noun / Verb",
+    pronunciation: "[ˈhɑːrnəs]",
+    simplePronunciation: "HAR-nis",
+    senses: [
+      {
+        number: 1,
+        type: "noun",
+        frequency: "Most Common",
+        definition: "A set of straps and fittings placed on a horse or other animal to control it or attach it to a cart, plow, or load.",
+        examples: [
+          "The farmer adjusted the harness on the horse before plowing.",
+          "The safety harness kept the climber secure on the rock face.",
+          "The parachute harness was checked before takeoff.",
+        ],
+      },
+      {
+        number: 2,
+        type: "noun",
+        frequency: "Common",
+        definition: "A system of straps or belts used to secure or hold a person or object in place (e.g., safety harness, baby harness).",
+        examples: [
+          "The pilot strapped into his harness before the flight.",
+          "A baby harness helps prevent falls in the car seat.",
+        ],
+      },
+      {
+        number: 3,
+        type: "verb",
+        frequency: "Common",
+        definition: "To put a harness on an animal or attach it to something.",
+        examples: [
+          "They harnessed the horses to the wagon for the journey.",
+          "Harness the ox before starting the field work.",
+        ],
+      },
+      {
+        number: 4,
+        type: "verb",
+        frequency: "Most Common",
+        definition: "To control and use the power or force of something to achieve a purpose, especially energy, skills, or resources. (figurative)",
+        examples: [
+          "We need to harness solar energy to combat climate change.",
+          "Companies must harness the skills of their workforce.",
+          "The dam harnesses the river's power to generate electricity.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Harness",
+      pronunciation: "[ˈhɑːrnəs]",
+      definitions: [
+        {
+          type: "noun/verb",
+          frequency: "Most Common",
+          definition: "Base form: a set of straps for animals/people; or to control and use power or resources.",
+          examples: [
+            "The horse wore a leather harness.",
+            "We can harness renewable energy sources.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["harness"],
+      verb: ["harness", "harnesses", "harnessed", "harnessing"],
+      adjective: ["harnessed"],
+    },
+    etymology: "From Old French *harneis* (12th c.) meaning 'military equipment, armor, fittings,' from Old Norse *hernest* 'army provisions' (*herr* 'army' + *nest* 'provisions'). Evolved to mean horse fittings by 14th c.; figurative 'control/use power' from 19th c.",
+    collocations: [
+      "horse/draft animal harness",
+      "safety/child/parachute harness",
+      "harness energy/power/skills/resources",
+      "harness the power of",
+      "harness renewable energy",
+      "harness a horse",
+    ],
+    usageNotes: [
+      "Noun often literal (equipment); verb frequently figurative for 'control/use productively.'",
+      "Figurative sense commonly used in business and environmental contexts.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Arreio / Cinto de segurança / Sistema de correias / Aproveitar / Canalizar / Controlar e usar",
+      examples: [
+        {
+          english: "The farmer adjusted the harness on the horse before plowing.",
+          translated: "O fazendeiro ajustou o arreio no cavalo antes de arar.",
+        },
+        {
+          english: "We need to harness solar energy to combat climate change.",
+          translated: "Precisamos aproveitar a energia solar para combater as mudanças climáticas.",
+        },
+        {
+          english: "The dam harnesses the river's power to generate electricity.",
+          translated: "A barragem canaliza o poder do rio para gerar eletricidade.",
+        },
+      ],
+    },
+  },
+
+  "gang-up": {
+    id: "gang-up",
+    word: "Gang Up",
+    type: "Phrasal Verb (usually 'gang up on/against')",
+    pronunciation: "[ɡæŋ ʌp]",
+    simplePronunciation: "gang up",
+    senses: [
+      {
+        number: 1,
+        type: "phrasal verb",
+        frequency: "Most Common",
+        definition: "To join together as a group to oppose, criticize, attack, frighten, or pressure someone, often unfairly or in a bullying way.",
+        examples: [
+          "The older boys ganged up on him at school and called him names.",
+          "They all ganged up to try and get him to change his decision.",
+          "The kids ganged up on me and convinced me to get pizza for dinner.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Gang",
+      pronunciation: "[ɡæŋ]",
+      definitions: [
+        {
+          type: "noun",
+          frequency: "Most Common",
+          definition: "A group of people, friends, or criminals acting together.",
+          examples: [
+            "He hangs out with a gang of troublemakers.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["gang"],
+      verb: ["gang up", "gangs up", "ganged up", "ganging up"],
+      related: ["gang up with"],
+    },
+    etymology: "'Gang up' from early 20th century (c. 1920s), colloquial; 'gang' from Old Norse *gangr* 'journey, course' (via Old English 'gang' 'going, walk') → 'group going together' → modern 'group/criminal band.'",
+    collocations: [
+      "gang up on someone",
+      "gang up against someone",
+      "the kids ganged up on me",
+      "the older children ganged up on them",
+    ],
+    usageNotes: [
+      "Negative connotation; implies unfairness or bullying; common in spoken, informal English.",
+      "Can be physical (attack) or verbal/emotional (criticize/pressure).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Se unir contra alguém / Fazer bullying em grupo / Se juntar para atacar/criticar alguém / Fazer aliança contra",
+      examples: [
+        {
+          english: "The older boys ganged up on him at school and called him names.",
+          translated: "Os meninos mais velhos se uniram contra ele na escola e o chamaram de nomes.",
+        },
+        {
+          english: "They all ganged up to try and get him to change his decision.",
+          translated: "Todos se juntaram para tentar fazé-lo mudar de ideia.",
+        },
+        {
+          english: "The kids ganged up on me and convinced me to get pizza for dinner.",
+          translated: "As crianças se uniram contra mim e me convenceram a pedir pizza para o jantar.",
+        },
+      ],
+    },
+  },
+
+  "stick-around": {
+    id: "stick-around",
+    word: "Stick Around",
+    type: "Phrasal Verb (intransitive, informal)",
+    pronunciation: "[stɪk əˈraʊnd]",
+    simplePronunciation: "stik uh-ROUND",
+    senses: [
+      {
+        number: 1,
+        type: "phrasal verb",
+        frequency: "Most Common",
+        definition: "To stay in a place or situation for a period of time, usually longer than expected, often while waiting for something or someone, or simply not leaving.",
+        examples: [
+          "Stick around after the meeting; we need to discuss the next steps.",
+          "You go ahead – I'll stick around until Candice shows up.",
+          "Everyone thought he would quit, but he's still sticking around.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Stick",
+      pronunciation: "[stɪk]",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "Most Common",
+          definition: "To attach firmly or remain fixed in place; figuratively, to remain, persist, or stay close.",
+          examples: [
+            "The label sticks to the bottle.",
+            "He sticks by his principles.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      verb: ["stick", "sticks", "stuck", "sticking"],
+      phrasal: ["stick around", "stick to", "stick with", "stick out", "stick up"],
+    },
+    etymology: "From early 1900s slang; 'stick' has long meant 'cling' or 'remain attached' (since c. 1300); the phrasal verb 'stick around' was recorded by 1912. From the image of something 'stuck' in place, not moving away.",
+    collocations: [
+      "stick around for a while",
+      "stick around until",
+      "stick around after",
+      "Why don't you stick around?",
+      "I'll stick around",
+    ],
+    usageNotes: [
+      "Very informal/colloquial; perfect for spoken English, invitations, or casual situations.",
+      "Often implies staying beyond the main event or while waiting.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Ficar por aí / Ficar por perto / Permanecer / Não ir embora (por um tempo)",
+      examples: [
+        {
+          english: "Stick around after the meeting; we need to discuss the next steps.",
+          translated: "Fica por aí depois da reunião; precisamos discutir os próximos passos.",
+        },
+        {
+          english: "You go ahead – I'll stick around until Candice shows up.",
+          translated: "Vai na frente – eu fico por aqui até a Candice chegar.",
+        },
+        {
+          english: "Everyone thought he would quit, but he's still sticking around.",
+          translated: "Todo mundo achou que ele ia sair, mas ele ainda está por aí.",
+        },
+      ],
+    },
+  },
+
+  pooper: {
+    id: "pooper",
+    word: "Pooper",
+    type: "Noun",
+    pronunciation: "[ˈpuːpər]",
+    simplePronunciation: "POO-per",
+    senses: [
+      {
+        number: 1,
+        type: "noun",
+        frequency: "Common",
+        contextLabel: "vulgar, slang",
+        definition: "The anus, often in reference to anal intercourse.",
+        examples: [
+          "She likes it up the pooper.",
+          "He hurt his pooper after the fall.",
+        ],
+      },
+      {
+        number: 2,
+        type: "noun",
+        frequency: "Common",
+        contextLabel: "slang, informal",
+        definition: "One who poops out on an activity; one who dampens the mood by lack of participation or negative attitude. (Mostly used in the phrase 'party pooper.')",
+        examples: [
+          "Don't be a party pooper and come dance with us!",
+          "The teacher was a real pooper, ruining our fun.",
+        ],
+      },
+      {
+        number: 3,
+        type: "noun",
+        frequency: "Less Common",
+        contextLabel: "humorous, euphemistic",
+        definition: "A person or animal that defecates, especially a child or pet.",
+        examples: [
+          "Jimmy's toilet training is finally over; he's becoming a good little pooper.",
+          "The dog is a messy pooper in the yard.",
+        ],
+      },
+      {
+        number: 4,
+        type: "noun",
+        frequency: "Less Common",
+        contextLabel: "derogatory, slang",
+        definition: "A loser, failure, or unproductive person.",
+        examples: [
+          "That guy is such a pooper; he never does anything useful.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Poop",
+      pronunciation: "[puːp]",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "Common",
+          definition: "To defecate (especially children/pets).",
+          examples: [
+            "The baby needs to poop.",
+          ],
+        },
+        {
+          type: "noun",
+          frequency: "Common",
+          definition: "Excrement; feces.",
+          examples: [
+            "The dog left poop on the lawn.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      verb: ["poop", "poops", "pooped", "pooping"],
+      noun: ["poop", "pooper"],
+      compound: ["party pooper", "pooper-scooper"],
+      adjective: ["poopy"],
+    },
+    etymology: "'Poop' (defecate) from early 18th century, likely imitative of the sound or action; related to 'poupen' (14c., short blast/horn sound → break wind → defecate). 'Party pooper' from late 1940s U.S. college slang, replacing 'wet blanket'; 'pooper' (anus) from mid-20th century vulgar slang.",
+    collocations: [
+      "party pooper",
+      "up the pooper (vulgar)",
+      "good/bad pooper",
+      "pooper-scooper",
+    ],
+    usageNotes: [
+      "Highly informal/slangy; vulgar senses are crude and not for polite conversation.",
+      "'Party pooper' is widely known and mildly negative/humorous.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "1. (vulgar: ânus) Cu / Bunda (referindo ao ânus) | 2. Estraga-prazeres / Chato de festa / Aguadeiro / Mata-vídeo | 3. Cocador (hum orístico, criança/animal que caca) | 4. Fracasso / Perdedor / Pessoa improdutiva",
+      examples: [
+        {
+          english: "Don't be a party pooper and come dance with us!",
+          translated: "Não seja estraga-prazeres e vem dançar com a gente!",
+        },
+        {
+          english: "Jimmy's toilet training is finally over; he's becoming a good little pooper.",
+          translated: "O treinamento de Jimmy no penico acabou; ele está virando um bom cocador.",
+        },
+      ],
+    },
+  },
+
+  plowing: {
+    id: "plowing",
+    word: "Plowing",
+    type: "Verb form (present participle/gerund)",
+    pronunciation: "[ˈplaʊɪŋ]",
+    simplePronunciation: "PLOW-ing",
+    senses: [
+      {
+        number: 1,
+        type: "verb",
+        frequency: "Most Common",
+        definition: "Turning over soil in a field with a plow to prepare it for planting.",
+        examples: [
+          "The farmer was plowing his field early in the morning.",
+          "After plowing, they planted the seeds in neat rows.",
+          "Tractors are used for plowing large areas quickly.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        definition: "Moving forcefully through something in a way that pushes it aside, often with difficulty.",
+        examples: [
+          "The ship was plowing through the heavy waves.",
+          "He plowed through the snow to reach the house.",
+          "The car plowed into the fence after losing control.",
+        ],
+      },
+      {
+        number: 3,
+        type: "verb",
+        frequency: "Common",
+        definition: "Working steadily through a large amount of work, information, or tasks.",
+        examples: [
+          "She's been plowing through the reports all day.",
+          "I have a lot of emails to plow through before lunch.",
+        ],
+      },
+      {
+        number: 4,
+        type: "verb",
+        frequency: "Less Common",
+        definition: "Clearing snow from roads or areas with a snowplow.",
+        examples: [
+          "The city trucks were plowing the streets after the blizzard.",
+          "They started plowing the driveway at dawn.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Plow",
+      pronunciation: "[plaʊ]",
+      definitions: [
+        {
+          type: "noun",
+          frequency: "Common",
+          definition: "A tool for turning over soil; a device for removing snow from roads.",
+          examples: [
+            "The farmer used a wooden plow drawn by oxen.",
+          ],
+        },
+        {
+          type: "verb",
+          frequency: "Most Common",
+          definition: "To turn over soil with a plow; to move forcefully through something; to work through steadily.",
+          examples: [
+            "We plow the field in spring.",
+            "The ship plowed through the waves.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["plow/plough"],
+      verb: ["plow/plough", "plows/ploughs", "plowed/ploughed", "plowing/ploughing"],
+      adjective: ["plowable/ploughable"],
+      phrasal: ["plow through", "plow into", "plow under"],
+    },
+    etymology: "From Late Old English 'plōg/plōh' ('plow, plowland'), borrowed from a Scandinavian source (Proto-Germanic *plōgō-); replaced earlier 'sulh' (furrow). Ultimate origin unknown, but related to words for plowing in other languages.",
+    collocations: [
+      "plowing the fields",
+      "plowing the land",
+      "plowing the soil",
+      "plowing through snow",
+      "plowing through water",
+      "plowing through work",
+      "plowing through papers",
+      "plowing through crowd",
+      "plowing the roads",
+      "plowing the driveway",
+    ],
+    usageNotes: [
+      "British spelling is 'ploughing' (same pronunciation); both are correct everywhere now.",
+      "Figurative uses like 'plowing through work' are very common in informal English.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "1. Arando / Lavrando (a terra) | 2. Abrindo caminho / Avan\u00e7ando com for\u00e7a / Rompendo | 3. Mergulhando / Trabalhando arduamente (em tarefas) | 4. Limpando/removendo (a neve com arado)",
+      examples: [
+        {
+          english: "The farmer was plowing his field early in the morning.",
+          translated: "O fazendeiro estava arando seu campo cedo pela manh\u00e3.",
+        },
+        {
+          english: "The ship was plowing through the heavy waves.",
+          translated: "O navio estava rompendo as ondas fortes.",
+        },
+        {
+          english: "She's been plowing through the reports all day.",
+          translated: "Ela vem mergulhando nos relat\u00f3rios o dia todo.",
+        },
+      ],
+    },
+  },
+
+  flaunt: {
+    id: "flaunt",
+    word: "Flaunt",
+    type: "Verb (transitive and intransitive)",
+    pronunciation: "[flɔːnt]",
+    simplePronunciation: "FLAWNT",
+    senses: [
+      {
+        number: 1,
+        type: "verb",
+        frequency: "Most Common",
+        definition: "To show or display something you are proud of in an obvious way to impress or attract admiration from others.",
+        examples: [
+          "She loves to flaunt her expensive jewelry at parties.",
+          "He flaunted his new sports car by driving slowly through the town center.",
+          "The celebrities were flaunting their designer clothes on the red carpet.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        contextLabel: "intransitive",
+        definition: "To show yourself off, often in a way that draws attention to your body or appearance.",
+        examples: [
+          "She was criticized for flaunting herself in a bikini on social media.",
+          "Some people flaunt their wealth by posting pictures of their vacations.",
+        ],
+      },
+      {
+        number: 3,
+        type: "verb",
+        frequency: "Less Common",
+        contextLabel: "literal",
+        definition: "To wave or flutter something in a showy or ostentatious manner.",
+        examples: [
+          "The flag flaunted in the breeze on top of the hill.",
+        ],
+      },
+    ],
+    wordFamily: {
+      verb: ["flaunt", "flaunts", "flaunted", "flaunting"],
+      noun: ["flaunt"],
+      adverb: ["flauntingly"],
+    },
+    etymology: "First recorded around 1560s meaning 'to display oneself in flashy clothes'; origin uncertain, possibly a variant of 'flout' or 'vaunt,' or from Scandinavian 'flanka' 'to waver, flutter' (related to 'flag'). Transitive sense 'to show off something' from 1827.",
+    collocations: [
+      "flaunt wealth",
+      "flaunt jewelry",
+      "flaunt muscles",
+      "flaunt new car",
+      "flaunt figure",
+      "flaunt your possessions",
+      "flaunt your achievements",
+      "flaunt your body",
+      "flaunt it (if you've got it)",
+    ],
+    usageNotes: [
+      "'Flaunt' often has a negative tone, suggesting vanity, arrogance, or bad taste in showing off.",
+      "Do not confuse with 'flout' (to disregard rules openly).",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Ostentar / Exibir / Exibir com orgulho (de forma óbvia, para impressionar) / Exibir descaradamente",
+      examples: [
+        {
+          english: "She loves to flaunt her expensive jewelry at parties.",
+          translated: "Ela adora ostentar suas joias caras nas festas.",
+        },
+        {
+          english: "He flaunted his new sports car by driving slowly through the town center.",
+          translated: "Ele exibiu seu carro esportivo novo dirigindo devagar pelo centro da cidade.",
+        },
+        {
+          english: "She was criticized for flaunting herself in a bikini on social media.",
+          translated: "Ela foi criticada por exibir o corpo de biquíni nas redes sociais.",
+        },
+      ],
+    },
+  },
+
+  slew: {
+    id: "slew",
+    word: "Slew",
+    type: "Noun / Verb (multiple meanings)",
+    pronunciation: "[sluː]",
+    simplePronunciation: "SLOO",
+    senses: [
+      {
+        number: 1,
+        type: "noun",
+        frequency: "Most Common",
+        contextLabel: "informal",
+        definition: "A very large number or quantity of something.",
+        examples: [
+          "She has a whole slew of new ideas for the project.",
+          "There were a slew of emails waiting in my inbox.",
+          "The company introduced a slew of new products last year.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        contextLabel: "past tense of 'slay'",
+        definition: "Old/standard past simple of 'slay' in the sense 'to kill violently.'",
+        examples: [
+          "The hero slew the dragon in the final battle.",
+          "According to the legend, he slew all his enemies in one night.",
+        ],
+      },
+      {
+        number: 3,
+        type: "verb",
+        frequency: "Common",
+        contextLabel: "vehicles/technical",
+        definition: "To turn, swing, or slide sideways, often suddenly or in an uncontrolled way; also, to cause something to turn on a fixed point.",
+        examples: [
+          "The car slewed sideways on the icy road.",
+          "The truck slewed across both lanes and blocked the highway.",
+          "The operator slewed the crane around to the left.",
+        ],
+      },
+    ],
+    wordFamily: {
+      noun: ["slew"],
+      verb: ["slew", "slews", "slewed", "slewing", "slay", "slain"],
+    },
+    etymology: "Noun 'slew' ('a lot') comes from Irish Gaelic *sluagh* 'host, crowd, multitude.' Verb 'slew' (turn) is from nautical English 'slue' of unknown origin, meaning 'to turn on an axis.' Verb 'slew' (killed) is the irregular past of English 'slay.'",
+    collocations: [
+      "a whole slew of problems",
+      "a whole slew of ideas",
+      "a whole slew of people",
+      "a slew of emails",
+      "the car slewed sideways",
+      "the car slewed off the road",
+      "slew the crane",
+      "slew the telescope",
+      "slew to the left",
+      "slew to the right",
+    ],
+    usageNotes: [
+      "In everyday speech, the noun pattern 'a slew of X' is very natural and informal, especially in American English.",
+      "The 'past of slay' meaning appears mostly in stories, fantasy, the Bible or 'epic' style sentences.",
+      "Modern English uses 'killed' much more often; 'slew' sounds literary, old-fashioned, or biblical in many contexts.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "1. (Substantivo) Um monte de / Uma porção de / Uma grande quantidade de | 2. (Verbo) Matou / Abateu / Degolou | 3. (Verbo) Virou bruscamente / Derrapou / Deslizou de lado",
+      examples: [
+        {
+          english: "She has a whole slew of new ideas for the project.",
+          translated: "Ela tem um monte de ideias novas para o projeto.",
+        },
+        {
+          english: "There were a slew of emails waiting in my inbox.",
+          translated: "Havia uma porção de e-mails esperando na minha caixa de entrada.",
+        },
+        {
+          english: "The hero slew the dragon in the final battle.",
+          translated: "O herói matou o dragão na batalha final.",
+        },
+        {
+          english: "The car slewed sideways on the icy road.",
+          translated: "O carro derrapou de lado na estrada congelada.",
+        },
+      ],
+    },
+  },
+
+  bulged: {
+    id: "bulged",
+    word: "Bulged",
+    type: "Verb form (past simple and past participle)",
+    pronunciation: "[bʌldʒd]",
+    simplePronunciation: "BULDJD",
+    senses: [
+      {
+        number: 1,
+        type: "verb",
+        frequency: "Most Common",
+        definition: "Stuck out or swelled outward in a rounded shape.",
+        examples: [
+          "His eyes bulged when he saw the price.",
+          "Her cheeks bulged as she tried not to laugh.",
+          "The suitcase bulged because it was packed with clothes.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        contextLabel: "bulged with",
+        definition: "Was completely full of something so that it pushed outwards.",
+        examples: [
+          "Their bags bulged with books and papers.",
+          "His pockets bulged with coins.",
+          "The cabinet bulged with old documents.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Bulge",
+      pronunciation: "[bʌldʒ]",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "Most Common",
+          definition: "To swell or stick out in a rounded way; to be completely full of something.",
+          examples: [
+            "The wall began to bulge outward.",
+            "Her pockets bulge with candy.",
+          ],
+        },
+        {
+          type: "noun",
+          frequency: "Common",
+          definition: "A rounded part that sticks out from a surface; a swelling or bump.",
+          examples: [
+            "There was a bulge in the wall.",
+            "He noticed a bulge in his jeans pocket.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      verb: ["bulge", "bulges", "bulged", "bulging"],
+      noun: ["bulge"],
+      adjective: ["bulging"],
+    },
+    etymology: "From Middle English 'bulge' meaning 'bag, wallet,' from Old French *boulge/bouge* and Late Latin *bulga* 'leather sack,' originally referring to a bag's rounded, swollen shape. Ultimately from a Proto-Indo-European root meaning 'to blow, swell.'",
+    collocations: [
+      "eyes bulged",
+      "cheeks bulged",
+      "stomach bulged",
+      "pockets bulged with",
+      "bags bulged with",
+      "suitcase bulged with",
+      "a bulge in the wall",
+      "a bulge in the pipe",
+      "a bulge in the carpet",
+    ],
+    usageNotes: [
+      "Often creates a vivid visual image, especially for eyes, pockets, bags, or walls.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "1. Inchou / Estufou / Ficou abaulado / Ficou saliente | 2. Estava abarrotado de / Estava cheio de / Estava estufado de",
+      examples: [
+        {
+          english: "His eyes bulged when he saw the price.",
+          translated: "Os olhos dele se arregalaram/estufaram quando viu o pre\u00e7o.",
+        },
+        {
+          english: "The suitcase bulged because it was packed with clothes.",
+          translated: "A mala ficou estufada porque estava cheia de roupas.",
+        },
+        {
+          english: "Their bags bulged with books and papers.",
+          translated: "As mochilas deles estavam abarrotadas de livros e pap\u00e9is.",
+        },
+      ],
+    },
+  },
+
+  maimed: {
+    id: "maimed",
+    word: "Maimed",
+    type: "Adjective / Past participle",
+    pronunciation: "[meɪmd]",
+    simplePronunciation: "MAYMD",
+    senses: [
+      {
+        number: 1,
+        type: "adjective",
+        frequency: "Most Common",
+        definition: "Partially or wholly deprived of the use of some part of the body, usually through severe injury; crippled or permanently damaged.",
+        examples: [
+          "Many soldiers returned from the war maimed, with lasting physical injuries.",
+          "The explosion left several people dead and many others maimed.",
+          "A maimed child was carried out of the ruined building.",
+        ],
+      },
+      {
+        number: 2,
+        type: "adjective",
+        frequency: "Less Common",
+        contextLabel: "figurative",
+        definition: "Seriously damaged or impaired in a non-physical sense (e.g. systems, organizations, plans).",
+        examples: [
+          "The company emerged from the scandal badly maimed but still functioning.",
+          "Years of corruption left the institution morally maimed.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Maim",
+      pronunciation: "[meɪm]",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "Most Common",
+          definition: "To injure someone so seriously that part of their body is permanently damaged and can no longer work properly.",
+          examples: [
+            "Hundreds of people are killed or maimed in car accidents every week.",
+            "The landmines have killed or maimed thousands of civilians.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      verb: ["maim", "maims", "maimed", "maiming"],
+      adjective: ["maimed"],
+      noun: ["maiming"],
+    },
+    etymology: "From Old French 'mahaignier/maheimer' meaning 'to injure, mutilate, cripple,' probably from Vulgar Latin *mahemare* or a Germanic root; entered English around the 13th century.",
+    collocations: [
+      "maimed for life",
+      "maimed veterans",
+      "maimed children",
+      "killed or maimed",
+      "seriously maimed",
+      "permanently maimed",
+    ],
+    usageNotes: [
+      "'Maimed' is strong and usually implies permanent, very serious harm, not just a simple injury.",
+      "Often used in news reports about war, terrorism, accidents, or violence.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "1. Mutilado / Aleijado / Gravemente ferido (com sequela permanente) | 2. Gravemente comprometido / Seriamente afetado/prejudicado",
+      examples: [
+        {
+          english: "The explosion left several people dead and many others maimed.",
+          translated: "A explos\u00e3o deixou v\u00e1rias pessoas mortas e muitas outras mutiladas.",
+        },
+        {
+          english: "Hundreds of people are killed or maimed in car accidents every week.",
+          translated: "Centenas de pessoas s\u00e3o mortas ou mutiladas em acidentes de carro todas as semanas.",
+        },
+        {
+          english: "The company emerged from the scandal badly maimed but still functioning.",
+          translated: "A empresa saiu do escândalo gravemente comprometida, mas ainda funcionando.",
+        },
+      ],
+    },
+  },
+
+  sloppy: {
+    id: "sloppy",
+    word: "Sloppy",
+    type: "Adjective",
+    pronunciation: "[ˈslɒpi] (British) / [ˈslɑːpi] (American)",
+    simplePronunciation: "SLOP-ee",
+    senses: [
+      {
+        number: 1,
+        type: "adjective",
+        frequency: "Most Common",
+        definition: "Showing a lack of care, thought, or effort; careless or not done thoroughly.",
+        examples: [
+          "Your essay is a bit sloppy; you need to check the grammar and punctuation.",
+          "His sloppy handwriting is very hard to read.",
+          "The report looked sloppy and unprofessional.",
+        ],
+      },
+      {
+        number: 2,
+        type: "adjective",
+        frequency: "Common",
+        definition: "Untidy, messy, or loose in appearance (especially clothes or general look).",
+        examples: [
+          "He went to the meeting in a sloppy T-shirt and old jeans.",
+          "The room was dirty and sloppy, with things thrown everywhere.",
+          "Don't be sloppy with your clothes if you want to make a good impression.",
+        ],
+      },
+      {
+        number: 3,
+        type: "adjective",
+        frequency: "Common",
+        contextLabel: "informal, disapproving",
+        definition: "Overly emotional, romantic, or sentimental in a silly or embarrassing way.",
+        examples: [
+          "She doesn't like sloppy love songs or cheesy romantic movies.",
+          "It's just a sloppy love story with a predictable ending.",
+        ],
+      },
+      {
+        number: 4,
+        type: "adjective",
+        frequency: "Common",
+        definition: "Very wet, soft, or liquid in an unpleasant, hard-to-handle way (food, ground, mixture, etc.).",
+        examples: [
+          "Don't make the mixture too sloppy, or the cake won't bake properly.",
+          "The field was sloppy and muddy after the heavy rain.",
+          "The soup is a bit too sloppy for my taste.",
+        ],
+      },
+    ],
+    wordFamily: {
+      adjective: ["sloppy"],
+      noun: ["sloppiness"],
+      adverb: ["sloppily"],
+      verb: ["slop"],
+    },
+    etymology: "First recorded in English in the 18th century with the sense 'muddy, wet,' coming from 'slop' (mud, spill, loose garment). The meanings 'careless,' 'untidy,' and 'over-sentimental' developed later from the idea of something messy or not controlled.",
+    collocations: [
+      "sloppy work",
+      "sloppy thinking",
+      "sloppy writing",
+      "sloppy research",
+      "sloppy handwriting",
+      "sloppy report",
+      "sloppy clothes",
+      "sloppy love story",
+      "sloppy romance",
+      "sloppy mixture",
+      "sloppy conditions",
+    ],
+    usageNotes: [
+      "Calling someone's work 'sloppy' is quite negative; it suggests carelessness, not just small mistakes.",
+      "For people's appearance, 'sloppy' means untidy, not stylish; it can sound critical or informal.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "1. Descuidado / Relaxado / Malfeito / Desleixado | 2. Desleixado / Desarrumado / Largado | 3. Meloso / Piegas / Exageradamente romântico | 4. Aguado / Muito mole / Lamacento",
+      examples: [
+        {
+          english: "Your essay is a bit sloppy; you need to check the grammar and punctuation.",
+          translated: "Seu texto está um pouco descuidado; você precisa revisar a gramática e a pontuação.",
+        },
+        {
+          english: "He went to the meeting in a sloppy T-shirt and old jeans.",
+          translated: "Ele foi para a reunião com uma camiseta toda largada e um jeans velho.",
+        },
+        {
+          english: "Don't make the mixture too sloppy, or the cake won't bake properly.",
+          translated: "Não deixe a massa muito aguada, senão o bolo não vai assar direito.",
+        },
+      ],
+    },
+  },
+
   sicken: {
     id: "sicken",
     word: "Sicken",
@@ -1696,6 +2780,101 @@ export const vocabularyData: Record<string, VocabularyWord> = {
     mediaImage: gohanPampered,
   },
 
+  "stack-up": {
+    id: "stack-up",
+    word: "Stack Up",
+    type: "Phrasal Verb (intransitive, informal)",
+    pronunciation: "[stæk ʌp]",
+    simplePronunciation: "stak up",
+    frequency: "Common",
+    senses: [
+      {
+        number: 1,
+        type: "Phrasal Verb",
+        frequency: "Most Common",
+        definition:
+          "To compare favorably or unfavorably with something or someone else (usually 'stack up against').",
+        examples: [
+          "How does the new model stack up against previous versions?",
+          "A mobile home simply doesn't stack up against a traditional house.",
+          "How does their product stack up against our own?",
+        ],
+      },
+      {
+        number: 2,
+        type: "Phrasal Verb",
+        frequency: "Common",
+        definition: "To accumulate or build up into a pile or backlog.",
+        examples: [
+          "Cars quickly stacked up behind the bus.",
+          "During the strike, refuse stacked up in the streets.",
+          "Unread emails have stacked up over the holiday.",
+        ],
+      },
+      {
+        number: 3,
+        type: "Phrasal Verb",
+        frequency: "Less Common",
+        definition:
+          "To seem reasonable or logical (often negative: 'doesn't stack up').",
+        examples: [
+          "That explanation just doesn't stack up.",
+          "The evidence doesn't stack up in court.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Stack",
+      pronunciation: "[stæk]",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "Common",
+          definition: "To pile up or arrange in a stack.",
+          examples: [
+            "Stack the books on the shelf.",
+            "Stack up the boxes neatly.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      verb: ["stack", "stacks", "stacked", "stacking"],
+      phrasal: ["stack up", "stacks up", "stacked up", "stacking up"],
+      related: ["stack the deck"],
+    },
+    collocations: [
+      "stack up against something/someone",
+      "stack up well/badly",
+      "cars/emails/work stack up",
+    ],
+    usageNotes: [
+      "Informal, especially for comparisons ('stack up against').",
+      "Negative 'doesn't stack up' is used for illogical claims.",
+      "Originally from poker imagery (comparing chip stacks), early 20th century.",
+    ],
+    etymology:
+      "From 'stack' (pile, Old Norse *stakkr*); phrasal 'stack up' from poker imagery (comparing chip stacks), early 20th c. for comparison.",
+    translation: {
+      language: "pt-BR",
+      text: "Se equiparar a; se sair em comparação; acumular; não fazer sentido",
+      examples: [
+        {
+          english: "How does the new model stack up against previous versions?",
+          translated: "Como o novo modelo se compara às versões anteriores?",
+        },
+        {
+          english: "Cars quickly stacked up behind the bus.",
+          translated: "Os carros rapidamente formaram fila atrás do ônibus.",
+        },
+        {
+          english: "That explanation just doesn't stack up.",
+          translated: "Essa explicação simplesmente não faz sentido.",
+        },
+      ],
+    },
+  },
+
   relentless: {
     id: "relentless",
     word: "Relentless",
@@ -2111,6 +3290,107 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         {
           english: "That's a stubborn stain — it won't come out.",
           translated: "Essa é uma mancha persistente — não sai.",
+        },
+      ],
+    },
+  },
+
+  plaguing: {
+    id: "plaguing",
+    word: "Plaguing",
+    type: "Verb form (present participle/gerund)",
+    pronunciation: "[ˈpleɪɡɪŋ]",
+    simplePronunciation: "PLAY-ging",
+    senses: [
+      {
+        number: 1,
+        type: "verb",
+        frequency: "Most Common",
+        definition: "Causing continuous trouble, pain, difficulty, or worry to someone or something over a period of time.",
+        examples: [
+          "Financial problems have been plaguing their new business for years.",
+          "A mysterious error has been plaguing the system since the last update.",
+          "Doubts kept plaguing her even after she made the decision.",
+        ],
+      },
+      {
+        number: 2,
+        type: "verb",
+        frequency: "Common",
+        contextLabel: "plague (someone) with",
+        definition: "To keep annoying, pestering, or harassing someone with questions, demands, or problems.",
+        examples: [
+          "Reporters have been plaguing the actor with questions about his private life.",
+          "The customer kept plaguing the support team with repeated emails.",
+          "She's been plaguing me with requests for help all week.",
+        ],
+      },
+      {
+        number: 3,
+        type: "adjective",
+        frequency: "Common",
+        definition: "Used before a noun to describe something that causes continuous trouble or suffering.",
+        examples: [
+          "Plaguing questions about the future kept him awake at night.",
+          "The company is trying to solve the plaguing issues with its new product line.",
+        ],
+      },
+    ],
+    rootWord: {
+      word: "Plague",
+      pronunciation: "[pleɪɡ]",
+      definitions: [
+        {
+          type: "verb",
+          frequency: "Most Common",
+          definition: "To cause constant or repeated trouble or suffering to someone or something.",
+          examples: [
+            "The disease plagued the region for decades.",
+          ],
+        },
+        {
+          type: "noun",
+          frequency: "Common",
+          definition: "A serious disease that kills many people; a large number of harmful things; a serious problem.",
+          examples: [
+            "The plague wiped out half the population.",
+          ],
+        },
+      ],
+    },
+    wordFamily: {
+      noun: ["plague"],
+      verb: ["plague", "plagues", "plagued", "plaguing"],
+      adjective: ["plague-ridden"],
+    },
+    etymology: "From Latin 'plaga' meaning 'stroke, wound,' later used for calamities and epidemic diseases; from there, the verb sense 'to afflict, to trouble greatly' developed.",
+    collocations: [
+      "problems/issues/errors plaguing someone",
+      "doubts/fears/questions plaguing someone",
+      "be plagued by/with debt",
+      "be plagued by/with disease",
+      "plaguing issue",
+      "plaguing problem",
+    ],
+    usageNotes: [
+      "Usually suggests something negative that continues for a long time and is difficult to escape.",
+      "In many contexts it is quite strong, so in neutral situations 'bothering' or 'troubling' may sound softer.",
+    ],
+    translation: {
+      language: "pt-BR",
+      text: "Atormentando; Afligindo; Incomodando (de forma constante); Perseguindo (no sentido figurado)",
+      examples: [
+        {
+          english: "Financial problems have been plaguing their new business for years.",
+          translated: "Problemas financeiros vêm atormentando o novo negócio deles há anos.",
+        },
+        {
+          english: "A mysterious error has been plaguing the system since the last update.",
+          translated: "Um erro misterioso vem incomodando o sistema desde a última atualização.",
+        },
+        {
+          english: "Reporters have been plaguing the actor with questions about his private life.",
+          translated: "Repórteres vêm atormentando o ator com perguntas sobre sua vida privada.",
         },
       ],
     },
@@ -4723,6 +6003,55 @@ export const vocabularyData: Record<string, VocabularyWord> = {
         {
           english: "It took energy and cunning just to survive.",
           translated: "Foi preciso energia e astúcia só para sobreviver.",
+        },
+      ],
+    },
+  },
+
+  ingenious: {
+    id: "ingenious",
+    word: "Ingenious",
+    type: "Adjective",
+    pronunciation: "[ɪnˈdʒiːniəs]",
+    simplePronunciation: "in-JEE-nee-uhs",
+    frequency: "Common",
+    definition:
+      "Showing cleverness, originality, and skill in invention, design, or problem-solving; having or displaying an aptitude for discovering or creating new things.",
+    examples: [
+      "She came up with an ingenious solution to the puzzle.",
+      "The engineer designed an ingenious machine that saves time and energy.",
+      "Johnny is so ingenious—he can make sculptures from ordinary materials.",
+    ],
+    wordFamily: {
+      adjective: ["ingenious"],
+      noun: ["ingenuity"],
+      adverb: ["ingeniously"],
+    },
+    collocations: [
+      "ingenious solution/idea/invention/device/plan",
+      "an ingenious cook/person/engineer",
+    ],
+    usageNotes: [
+      "Positive connotation of admiration for creativity.",
+      "Do not confuse with 'ingenuous' (naive/sincere).",
+    ],
+    etymology:
+      "Late Middle English from French 'ingénieux' or Latin 'ingeniosus' 'of good capacity, full of intellect,' from 'ingenium' 'innate quality, talent' (lit. 'inborn,' from 'in-' 'in' + 'gignere' 'beget').",
+    translation: {
+      language: "pt-BR",
+      text: "Engenhoso; inteligente; criativo; astuto (de forma positiva, inventivo)",
+      examples: [
+        {
+          english: "She came up with an ingenious solution to the puzzle.",
+          translated: "Ela bolou uma solução engenhosa para o quebra-cabeça.",
+        },
+        {
+          english: "The engineer designed an ingenious machine that saves time and energy.",
+          translated: "O engenheiro projetou uma máquina engenhosa que economiza tempo e energia.",
+        },
+        {
+          english: "Johnny is so ingenious—he can make sculptures from ordinary materials.",
+          translated: "Johnny é tão engenhoso – ele faz esculturas com materiais comuns.",
         },
       ],
     },

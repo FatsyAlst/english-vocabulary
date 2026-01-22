@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { getBlogPostBySlug } from "../lib/blogData";
+import { TracingBeam } from "../components/TracingBeam";
 
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -158,64 +159,66 @@ const BlogPostPage = () => {
         </div>
       </header>
 
-      {/* Article */}
-      <article className="max-w-3xl mx-auto px-6 py-12">
-        {/* Hero */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-10"
-        >
-          {/* Categories */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            {post.categories.map((category) => (
-              <span
-                key={category}
-                className={`px-3 py-1 text-xs font-medium rounded-full ${getCategoryColor(category)}`}
-              >
-                {category}
-              </span>
-            ))}
-          </div>
-
-          {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-zinc-100 mb-6 leading-tight">
-            {post.title}
-          </h1>
-
-          {/* Meta */}
-          <div className="flex items-center gap-4 text-sm text-zinc-500 mb-8">
-            <span>{formatDate(post.publishedAt)}</span>
-            <span>•</span>
-            <span>{post.readingTime} min read</span>
-          </div>
-
-          {/* Cover Image */}
-          {post.coverImage && (
-            <div className="w-full h-64 md:h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-700 to-zinc-800 mb-10">
-              <img 
-                src={post.coverImage} 
-                alt={post.title}
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                }}
-              />
+      {/* Article with Tracing Beam */}
+      <TracingBeam className="px-6" beamColor="#a855f7">
+        <article className="max-w-3xl mx-auto py-12">
+          {/* Hero */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-10"
+          >
+            {/* Categories */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              {post.categories.map((category) => (
+                <span
+                  key={category}
+                  className={`px-3 py-1 text-xs font-medium rounded-full ${getCategoryColor(category)}`}
+                >
+                  {category}
+                </span>
+              ))}
             </div>
-          )}
-        </motion.div>
 
-        {/* Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="prose prose-invert max-w-none"
-        >
-          {renderContent(post.content)}
-        </motion.div>
-      </article>
+            {/* Title */}
+            <h1 className="text-4xl md:text-5xl font-bold text-zinc-100 mb-6 leading-tight">
+              {post.title}
+            </h1>
+
+            {/* Meta */}
+            <div className="flex items-center gap-4 text-sm text-zinc-500 mb-8">
+              <span>{formatDate(post.publishedAt)}</span>
+              <span>•</span>
+              <span>{post.readingTime} min read</span>
+            </div>
+
+            {/* Cover Image */}
+            {post.coverImage && (
+              <div className="w-full h-64 md:h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-700 to-zinc-800 mb-10">
+                <img 
+                  src={post.coverImage} 
+                  alt={post.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+            )}
+          </motion.div>
+
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="prose prose-invert max-w-none"
+          >
+            {renderContent(post.content)}
+          </motion.div>
+        </article>
+      </TracingBeam>
 
       {/* Footer */}
       <footer className="border-t border-zinc-800 py-8 mt-12">
